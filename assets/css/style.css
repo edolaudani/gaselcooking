@@ -921,3 +921,12 @@ p {
         margin-bottom: 28px;
     }
 }
+
+.hero-content {
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+}
+
+.hero-text {
+    margin-left: 0 !important;
+}
