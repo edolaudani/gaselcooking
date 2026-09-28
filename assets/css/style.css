@@ -691,8 +691,8 @@ p {
        This is the spacing that gives the hero
        the correct visual alignment on desktop.
     */
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 32px;
+    padding-right: 32px;
 
     display: flex;
     align-items: center;
