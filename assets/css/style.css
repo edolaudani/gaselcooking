@@ -396,32 +396,16 @@ p {
 
 .site-logo {
     display: inline-flex;
-    align-items: baseline;
+    align-items: center;
 
-    gap: 7px;
     flex-shrink: 0;
-
-    color: var(--blue);
 }
 
-.logo-main {
-    font-family: var(--font-heading);
-    font-size: 30px;
-    font-weight: 700;
+.site-logo img {
+    display: block;
 
-    letter-spacing: 0.02em;
-    line-height: 1;
-}
-
-.logo-sub {
-    font-family: var(--font-body);
-    font-size: 9px;
-    font-weight: 700;
-
-    letter-spacing: 0.18em;
-    line-height: 1;
-
-    color: var(--brown);
+    width: 150px;
+    height: auto;
 }
 
 
@@ -1578,12 +1562,6 @@ p {
 
 .footer-brand .site-logo {
     margin-bottom: 25px;
-
-    color: var(--white);
-}
-
-.footer-brand .logo-sub {
-    color: var(--yellow);
 }
 
 .footer-brand p {
@@ -1708,6 +1686,7 @@ p {
     .section-header {
         margin-bottom: 45px;
     }
+
 
     /* Hero */
 
@@ -1848,8 +1827,8 @@ p {
         display: block;
     }
 
-    .logo-main {
-        font-size: 28px;
+    .site-logo img {
+        width: 135px;
     }
 
 }
