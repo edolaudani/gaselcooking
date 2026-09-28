@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+
 /* =========================================================
    GASEL COOKING
    Global Design System
@@ -5,10 +8,12 @@
 
 
 /* =========================================================
-   1. BRAND COLOURS
+   1. DESIGN TOKENS
    ========================================================= */
 
 :root {
+
+    /* Brand colours */
     --yellow: #EDDD88;
     --gold: #E1C15B;
     --cream: #EBE9B2;
@@ -16,35 +21,10 @@
     --blue: #273C60;
     --black: #000000;
     --white: #FFFFFF;
-}
 
-
-/* =========================================================
-   2. TYPOGRAPHY
-   ========================================================= */
-
-/*
-   Cormorant Garamond:
-   Elegant editorial serif for headings and brand moments.
-
-   DM Sans:
-   Clean, modern sans-serif for body text and UI.
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
-
-
-:root {
+    /* Typography */
     --font-heading: "Cormorant Garamond", Georgia, serif;
     --font-body: "DM Sans", Arial, sans-serif;
-}
-
-
-/* =========================================================
-   3. DESIGN TOKENS
-   ========================================================= */
-
-:root {
 
     /* Layout */
     --container-width: 1200px;
@@ -71,7 +51,7 @@
 
 
 /* =========================================================
-   4. RESET
+   2. RESET
    ========================================================= */
 
 *,
@@ -125,7 +105,7 @@ a {
 
 
 /* =========================================================
-   5. TYPOGRAPHY SYSTEM
+   3. TYPOGRAPHY
    ========================================================= */
 
 h1,
@@ -135,9 +115,11 @@ h4,
 h5,
 h6 {
     margin: 0;
+
     font-family: var(--font-heading);
     font-weight: 600;
     line-height: 1.05;
+
     color: var(--blue);
 }
 
@@ -190,7 +172,7 @@ p {
 
 
 /* =========================================================
-   6. LAYOUT
+   4. LAYOUT
    ========================================================= */
 
 .container {
@@ -218,7 +200,7 @@ p {
 
 
 /* =========================================================
-   7. BUTTONS
+   5. BUTTONS
    ========================================================= */
 
 .btn {
@@ -283,7 +265,7 @@ p {
 
 
 /* =========================================================
-   8. LINKS
+   6. LINKS
    ========================================================= */
 
 .link {
@@ -318,7 +300,7 @@ p {
 
 
 /* =========================================================
-   9. CARDS
+   7. CARDS
    ========================================================= */
 
 .card {
@@ -341,7 +323,7 @@ p {
 
 
 /* =========================================================
-   10. COLOUR UTILITIES
+   8. COLOUR UTILITIES
    ========================================================= */
 
 .bg-white {
@@ -386,7 +368,7 @@ p {
 
 
 /* =========================================================
-   11. ACCESSIBILITY
+   9. ACCESSIBILITY
    ========================================================= */
 
 :focus-visible {
@@ -396,56 +378,7 @@ p {
 
 
 /* =========================================================
-   12. RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-    :root {
-        --container-padding: 24px;
-        --section-padding: 80px;
-    }
-
-    .section-header {
-        margin-bottom: 40px;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    :root {
-        --container-padding: 20px;
-        --section-padding: var(--section-padding-mobile);
-    }
-
-    body {
-        font-size: 15px;
-    }
-
-    h1 {
-        font-size: clamp(46px, 14vw, 68px);
-    }
-
-    h2 {
-        font-size: clamp(38px, 11vw, 54px);
-    }
-
-    h3 {
-        font-size: 32px;
-    }
-
-    .text-large {
-        font-size: 18px;
-    }
-
-    .btn {
-        min-height: 50px;
-        padding-inline: 22px;
-    }
-}
-/* =========================================================
-   13. HEADER
+   10. HEADER
    ========================================================= */
 
 .site-header {
@@ -464,12 +397,13 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 32px;
 }
 
 
 /* =========================================================
-   LOGO
+   11. LOGO
    ========================================================= */
 
 .site-logo {
@@ -502,15 +436,15 @@ p {
 
 
 /* =========================================================
-   DESKTOP NAVIGATION
+   12. DESKTOP NAVIGATION
    ========================================================= */
 
 .main-nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 28px;
 
+    gap: 28px;
     margin-left: auto;
 }
 
@@ -521,6 +455,7 @@ p {
 
     font-size: 13px;
     font-weight: 600;
+
     color: var(--blue);
 
     transition: color var(--transition-fast);
@@ -556,7 +491,7 @@ p {
 
 
 /* =========================================================
-   HEADER CTA
+   13. HEADER CTA
    ========================================================= */
 
 .header-cta {
@@ -591,7 +526,7 @@ p {
 
 
 /* =========================================================
-   MOBILE MENU BUTTON
+   14. MOBILE MENU BUTTON
    ========================================================= */
 
 .menu-toggle {
@@ -611,6 +546,7 @@ p {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
     gap: 6px;
 }
 
@@ -637,7 +573,7 @@ p {
 
 
 /* =========================================================
-   MOBILE MENU
+   15. MOBILE MENU
    ========================================================= */
 
 .mobile-menu {
@@ -686,7 +622,117 @@ p {
 
 
 /* =========================================================
-   HEADER RESPONSIVE
+   16. HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 720px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: var(--cream);
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+
+    z-index: 0;
+}
+
+.hero-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.58) 0%,
+            rgba(0, 0, 0, 0.30) 42%,
+            rgba(0, 0, 0, 0.05) 72%,
+            rgba(0, 0, 0, 0) 100%
+        );
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 650px;
+
+    padding: 80px 0;
+
+    color: var(--white);
+}
+
+.hero-text .eyebrow {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--yellow);
+}
+
+.hero-text h1 {
+    margin: 0 0 24px;
+
+    color: var(--white);
+
+    font-size: clamp(3.5rem, 6vw, 6.2rem);
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+}
+
+.hero-text p {
+    max-width: 500px;
+
+    margin: 0 0 34px;
+
+    color: var(--white);
+
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.hero-text .btn-primary {
+    background: var(--yellow);
+    color: var(--black);
+}
+
+.hero-text .btn-primary:hover {
+    background: var(--gold);
+}
+
+
+/* =========================================================
+   17. TABLET
    ========================================================= */
 
 @media (max-width: 1000px) {
@@ -700,6 +746,35 @@ p {
     }
 }
 
+
+@media (max-width: 900px) {
+
+    :root {
+        --container-padding: 24px;
+        --section-padding: 80px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero-text {
+        max-width: 580px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(3rem, 8vw, 5rem);
+    }
+}
+
+
+/* =========================================================
+   18. MOBILE HEADER
+   ========================================================= */
 
 @media (max-width: 850px) {
 
@@ -724,121 +799,47 @@ p {
         font-size: 28px;
     }
 }
-/* ========================================
-   HERO
-   ======================================== */
-
-.hero {
-    position: relative;
-    min-height: 720px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background: var(--cream);
-}
-
-.hero-image {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.58) 0%,
-        rgba(0, 0, 0, 0.30) 42%,
-        rgba(0, 0, 0, 0.05) 72%,
-        rgba(0, 0, 0, 0) 100%
-    );
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.hero-text {
-    max-width: 650px;
-    padding: 80px 0;
-    color: var(--white);
-}
-
-.hero-text .eyebrow {
-    display: inline-block;
-    margin-bottom: 18px;
-    color: var(--yellow);
-}
-
-.hero-text h1 {
-    margin: 0 0 24px;
-    color: var(--white);
-    font-size: clamp(3.5rem, 6vw, 6.2rem);
-    line-height: 0.95;
-    letter-spacing: -0.025em;
-}
-
-.hero-text p {
-    max-width: 500px;
-    margin: 0 0 34px;
-    color: var(--white);
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-.hero-text .btn-primary {
-    background: var(--yellow);
-    color: var(--black);
-}
-
-.hero-text .btn-primary:hover {
-    background: var(--gold);
-}
 
 
-/* ========================================
-   HERO - TABLET
-   ======================================== */
-
-@media (max-width: 900px) {
-
-    .hero {
-        min-height: 650px;
-    }
-
-    .hero-text {
-        max-width: 580px;
-    }
-
-    .hero-text h1 {
-        font-size: clamp(3rem, 8vw, 5rem);
-    }
-
-}
-
-
-/* ========================================
-   HERO - MOBILE
-   ======================================== */
+/* =========================================================
+   19. MOBILE
+   ========================================================= */
 
 @media (max-width: 600px) {
 
+    :root {
+        --container-padding: 20px;
+        --section-padding: var(--section-padding-mobile);
+    }
+
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: clamp(46px, 14vw, 68px);
+    }
+
+    h2 {
+        font-size: clamp(38px, 11vw, 54px);
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    .text-large {
+        font-size: 18px;
+    }
+
+    .btn {
+        min-height: 50px;
+        padding-inline: 22px;
+    }
+
     .hero {
         min-height: 680px;
+
         align-items: flex-end;
     }
 
@@ -847,12 +848,13 @@ p {
     }
 
     .hero-overlay {
-        background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.05) 0%,
-            rgba(0, 0, 0, 0.15) 35%,
-            rgba(0, 0, 0, 0.72) 100%
-        );
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.05) 0%,
+                rgba(0, 0, 0, 0.15) 35%,
+                rgba(0, 0, 0, 0.72) 100%
+            );
     }
 
     .hero-text {
@@ -862,13 +864,14 @@ p {
     .hero-text h1 {
         font-size: clamp(2.8rem, 13vw, 4rem);
         line-height: 0.95;
+
         margin-bottom: 20px;
     }
 
     .hero-text p {
         font-size: 1.05rem;
         line-height: 1.5;
+
         margin-bottom: 28px;
     }
-
 }
