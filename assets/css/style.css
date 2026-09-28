@@ -176,16 +176,19 @@ p {
    ========================================================= */
 
 .container {
-    width: min(
-        calc(100% - (var(--container-padding) * 2)),
-        var(--container-width)
-    );
+    width: 100%;
+    max-width: var(--container-width);
 
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
 }
 
 .section {
-    padding-block: var(--section-padding);
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
 }
 
 .section-header {
@@ -194,7 +197,8 @@ p {
 }
 
 .section-header.center {
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
@@ -305,6 +309,7 @@ p {
 
 .card {
     background: var(--white);
+
     border-radius: var(--radius-medium);
 
     box-shadow: var(--shadow-soft);
@@ -388,6 +393,7 @@ p {
     width: 100%;
 
     background: var(--white);
+
     border-bottom: 1px solid rgba(39, 60, 96, 0.12);
 }
 
@@ -409,6 +415,7 @@ p {
 .site-logo {
     display: inline-flex;
     align-items: baseline;
+
     gap: 7px;
 
     flex-shrink: 0;
@@ -420,6 +427,7 @@ p {
     font-family: var(--font-heading);
     font-size: 30px;
     font-weight: 700;
+
     letter-spacing: 0.02em;
     line-height: 1;
 }
@@ -428,6 +436,7 @@ p {
     font-family: var(--font-body);
     font-size: 9px;
     font-weight: 700;
+
     letter-spacing: 0.18em;
     line-height: 1;
 
@@ -445,6 +454,7 @@ p {
     justify-content: center;
 
     gap: 28px;
+
     margin-left: auto;
 }
 
@@ -465,6 +475,7 @@ p {
     content: "";
 
     position: absolute;
+
     left: 0;
     bottom: 1px;
 
@@ -500,7 +511,9 @@ p {
     justify-content: center;
 
     min-height: 46px;
-    padding: 0 22px;
+
+    padding-left: 22px;
+    padding-right: 22px;
 
     border-radius: var(--radius-pill);
 
@@ -520,7 +533,9 @@ p {
 
 .header-cta:hover {
     background: var(--black);
+
     transform: translateY(-2px);
+
     box-shadow: var(--shadow-soft);
 }
 
@@ -545,6 +560,7 @@ p {
 
     align-items: center;
     justify-content: center;
+
     flex-direction: column;
 
     gap: 6px;
@@ -588,11 +604,16 @@ p {
     display: flex;
     flex-direction: column;
 
-    padding: 16px var(--container-padding) 28px;
+    padding-top: 16px;
+    padding-bottom: 28px;
 }
 
 .mobile-nav-link {
-    padding: 15px 0;
+    margin-left: var(--container-padding);
+    margin-right: var(--container-padding);
+
+    padding-top: 15px;
+    padding-bottom: 15px;
 
     border-bottom: 1px solid rgba(39, 60, 96, 0.1);
 
@@ -609,7 +630,8 @@ p {
     justify-content: center;
 
     min-height: 52px;
-    margin-top: 22px;
+
+    margin: 22px var(--container-padding) 0;
 
     border-radius: var(--radius-pill);
 
@@ -640,7 +662,11 @@ p {
 
 .hero-image {
     position: absolute;
-    inset: 0;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
     z-index: 0;
 }
@@ -659,7 +685,11 @@ p {
 
 .hero-overlay {
     position: absolute;
-    inset: 0;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
     z-index: 1;
 
@@ -679,6 +709,13 @@ p {
     z-index: 2;
 
     width: 100%;
+    max-width: var(--container-width);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
 
     display: flex;
     align-items: center;
@@ -687,7 +724,8 @@ p {
 .hero-text {
     max-width: 650px;
 
-    padding: 80px 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
 
     color: var(--white);
 }
@@ -834,7 +872,8 @@ p {
 
     .btn {
         min-height: 50px;
-        padding-inline: 22px;
+        padding-left: 22px;
+        padding-right: 22px;
     }
 
     .hero {
@@ -857,12 +896,19 @@ p {
             );
     }
 
+    .hero-content {
+        padding-left: var(--container-padding);
+        padding-right: var(--container-padding);
+    }
+
     .hero-text {
-        padding: 60px 0 50px;
+        padding-top: 60px;
+        padding-bottom: 50px;
     }
 
     .hero-text h1 {
         font-size: clamp(2.8rem, 13vw, 4rem);
+
         line-height: 0.95;
 
         margin-bottom: 20px;
