@@ -1,593 +1,708 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Handmade Pasta Masterclass | GASEL Cooking</title>
-    <meta
-        name="description"
-        content="Join GASEL Cooking for a private, hands-on Italian pasta masterclass at your home in Luxembourg. Make fresh pasta from scratch and enjoy a complete Italian meal together."
-    >
+  <title>Italian Cooking Masterclass | GASEL Cooking</title>
+  <meta
+    name="description"
+    content="Join GASEL Cooking for an authentic Italian cooking experience in the comfort of your own home. Learn to make fresh pasta, sauces, focaccia and more."
+  >
 
-    <link rel="icon" href="../assets/images/logo/gasel-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-    <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
 
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a
+        href="../"
+        class="site-logo"
+        aria-label="GASEL Cooking home"
+      >
+        <img
+          src="../assets/images/logo/gasel-logo.png"
+          width="1500"
+          height="400"
+          alt="GASEL Cooking"
+        >
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="../">Home</a>
+        <a href="./" class="active">Our Masterclass</a>
+        <a href="../about/">About Us</a>
+        <a href="../events/">Plan Your Event</a>
+        <a href="../gift-vouchers/">Gift a Masterclass</a>
+        <a href="../faq/">FAQ</a>
+      </nav>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+    <div class="mobile-menu">
+
+      <a href="../">Home</a>
+      <a href="./" class="active">Our Masterclass</a>
+      <a href="../about/">About Us</a>
+      <a href="../events/">Plan Your Event</a>
+      <a href="../gift-vouchers/">Gift a Masterclass</a>
+      <a href="../faq/">FAQ</a>
+
+    </div>
+  </header>
+
+
+  <main>
+
     <!-- =========================
-         HEADER
+         HERO
     ========================== -->
+    <section class="masterclass-hero">
 
-    <header class="site-header">
-        <div class="container header-inner">
+      <div class="container">
 
-            <a href="../" class="site-logo" aria-label="GASEL Cooking home">
-                <img
-                    src="../assets/images/logo/gasel-logo.png"
-                    alt="GASEL Cooking"
-                >
+        <div class="masterclass-hero-content">
+
+          <p class="eyebrow">
+            GASEL Cooking Masterclass
+          </p>
+
+          <h1>
+            Fresh pasta.<br>
+            Italian traditions.<br>
+            Made together.
+          </h1>
+
+          <p class="hero-description">
+            A hands-on Italian cooking experience in the comfort of your own home.
+            From flour to fresh pasta, we will cook, eat and enjoy the process together.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              href="#booking"
+              class="btn btn-primary"
+              data-booking-open
+            >
+              Book a Masterclass
             </a>
 
-            <nav class="desktop-nav" aria-label="Main navigation">
-                <a href="../">Home</a>
-                <a href="./" class="active">Our Masterclass</a>
-                <a href="../about/">About Us</a>
-                <a href="../events/">Plan Your Event</a>
-                <a href="../gift-vouchers/">Gift a Masterclass</a>
-                <a href="../faq/">FAQ</a>
-            </nav>
-
-            <button
-                class="menu-toggle"
-                type="button"
-                aria-label="Open menu"
-                aria-expanded="false"
+            <a
+              href="#menu"
+              class="btn btn-secondary"
             >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+              Discover the menu
+            </a>
+
+          </div>
 
         </div>
 
-        <div class="mobile-menu">
-            <a href="../">Home</a>
-            <a href="./" class="active">Our Masterclass</a>
-            <a href="../about/">About Us</a>
-            <a href="../events/">Plan Your Event</a>
-            <a href="../gift-vouchers/">Gift a Masterclass</a>
-            <a href="../faq/">FAQ</a>
-        </div>
-    </header>
+      </div>
 
-
-    <main>
-
-        <!-- =========================
-             HERO
-        ========================== -->
-
-        <section class="masterclass-hero">
-            <div class="container">
-
-                <div class="masterclass-hero-content">
-
-                    <p class="eyebrow">OUR FLAGSHIP MASTERCLASS</p>
-
-                    <h1>Handmade Pasta Making</h1>
-
-                    <p class="hero-text">
-                        A private, hands-on Italian cooking experience at your home.
-                        Learn how to make fresh pasta from scratch and cook a complete
-                        Italian menu together, step by step.
-                    </p>
-
-                    <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-booking-open
-                    >
-                        Book Class
-                    </button>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- =========================
-             ABOUT THE EXPERIENCE
-        ========================== -->
-
-        <section class="masterclass-about section">
-            <div class="container">
-
-                <div class="section-heading">
-                    <p class="eyebrow">ABOUT THE EXPERIENCE</p>
-                    <h2>Learn by actually cooking.</h2>
-                </div>
-
-                <div class="masterclass-about-grid">
-
-                    <div class="masterclass-about-copy">
-
-                        <p>
-                            The Masterclass is a hands-on Italian cooking experience
-                            for anyone who loves learning by doing. We come directly
-                            to your home and cook step by step together, guiding you
-                            through a complete Italian menu, from fresh pasta dough
-                            to the final dish.
-                        </p>
-
-                        <p>
-                            It is a relaxed and interactive experience where you
-                            cook, ask questions, taste along the way, and truly
-                            understand Italian home cooking.
-                        </p>
-
-                        <p>
-                            After booking, the menu is defined together and usually
-                            includes one appetizer and one handmade pasta dish,
-                            adapted to your tastes, dietary requirements and
-                            experience level.
-                        </p>
-
-                    </div>
-
-                    <div class="masterclass-about-note">
-
-                        <div class="info-card">
-                            <span class="info-card-label">AT YOUR HOME</span>
-                            <h3>Italian cooking, in your own kitchen.</h3>
-                            <p>
-                                We bring the ingredients and kitchen utensils.
-                                You only need a functional kitchen with a
-                                stovetop and oven.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- =========================
-             PROPOSED MENU
-        ========================== -->
-
-        <section class="masterclass-menu section section-cream">
-            <div class="container">
-
-                <div class="section-heading centered">
-                    <p class="eyebrow">OUR PROPOSED MENU</p>
-                    <h2>A complete Italian menu.</h2>
-                    <p>
-                        The exact recipes are chosen together after booking,
-                        according to your preferences and experience.
-                    </p>
-                </div>
-
-                <div class="menu-grid">
-
-                    <article class="menu-card">
-                        <div class="menu-card-number">01</div>
-                        <div>
-                            <p class="menu-card-label">STARTER</p>
-                            <h3>Your Italian Appetizer</h3>
-                            <p>
-                                Prepare a simple Italian appetizer together,
-                                chosen according to the menu and your preferences.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="menu-card">
-                        <div class="menu-card-number">02</div>
-                        <div>
-                            <p class="menu-card-label">MAIN DISH</p>
-                            <h3>Your Handmade Pasta Dish</h3>
-                            <p>
-                                Make fresh pasta from scratch and turn it into
-                                the main dish of your Italian meal.
-                            </p>
-                        </div>
-                    </article>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- =========================
-             WHAT'S INCLUDED
-        ========================== -->
-
-        <section class="masterclass-included section">
-            <div class="container">
-
-                <div class="included-grid">
-
-                    <div class="section-heading">
-                        <p class="eyebrow">WHAT'S INCLUDED</p>
-                        <h2>Everything you need to cook together.</h2>
-                    </div>
-
-                    <div class="included-list">
-
-                        <div class="included-item">
-                            <span>01</span>
-                            <p>Private Italian cooking masterclass at your home</p>
-                        </div>
-
-                        <div class="included-item">
-                            <span>02</span>
-                            <p>Hands-on preparation of a complete menu</p>
-                        </div>
-
-                        <div class="included-item">
-                            <span>03</span>
-                            <p>One appetizer prepared together</p>
-                        </div>
-
-                        <div class="included-item">
-                            <span>04</span>
-                            <p>One main dish based on handmade fresh pasta</p>
-                        </div>
-
-                        <div class="included-item">
-                            <span>05</span>
-                            <p>Choice of recipes, from easier to more advanced</p>
-                        </div>
-
-                        <div class="included-item">
-                            <span>06</span>
-                            <p>Step-by-step guidance and cooking techniques</p>
-                        </div>
-
-                        <div class="included-item">
-                            <span>07</span>
-                            <p>All ingredients and kitchen utensils provided</p>
-                        </div>
-
-                        <div class="included-item">
-                            <span>08</span>
-                            <p>A relaxed, social experience focused on learning and sharing</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- =========================
-             BOOKING
-        ========================== -->
-
-        <section class="masterclass-booking section section-yellow" id="book">
-
-            <div class="container">
-
-                <div class="booking-layout">
-
-                    <div class="booking-intro">
-
-                        <p class="eyebrow">BOOK YOUR EXPERIENCE</p>
-
-                        <h2>Handmade Pasta Masterclass</h2>
-
-                        <p>
-                            Tell us when you would like to cook together and
-                            we will get back to you to confirm availability
-                            and finalise the details.
-                        </p>
-
-                        <div class="booking-meta">
-
-                            <div class="booking-meta-item">
-                                <span>Duration</span>
-                                <strong>2 Hours</strong>
-                            </div>
-
-                            <div class="booking-meta-item">
-                                <span>Format</span>
-                                <strong>In Person</strong>
-                            </div>
-
-                            <div class="booking-meta-item">
-                                <span>Location</span>
-                                <strong>Your Home</strong>
-                            </div>
-
-                            <div class="booking-meta-item">
-                                <span>Group Size</span>
-                                <strong>2–8 People</strong>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="booking-card">
-
-                        <div class="booking-price">
-
-                            <div>
-                                <span>2 people</span>
-                                <strong>€79 <small>/ person</small></strong>
-                            </div>
-
-                            <div>
-                                <span>3–8 people</span>
-                                <strong>€65 <small>/ person</small></strong>
-                            </div>
-
-                        </div>
-
-                        <p class="booking-card-text">
-                            Booking is requested through our website.
-                            Once we receive your request, we will get in touch
-                            to confirm availability and finalise the details together.
-                        </p>
-
-                        <button
-                            type="button"
-                            class="btn btn-primary btn-full"
-                            data-booking-open
-                        >
-                            Book a Masterclass
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             BOOKING JOURNEY
-        ========================== -->
-
-        <section class="masterclass-process section">
-            <div class="container">
-
-                <div class="section-heading centered">
-                    <p class="eyebrow">BOOKING THE EXPERIENCE</p>
-                    <h2>From booking to dinner.</h2>
-                    <p>
-                        We take care of the planning. You just need to bring
-                        your appetite and a little curiosity.
-                    </p>
-                </div>
-
-
-                <div class="process-list">
-
-                    <article class="process-item">
-                        <div class="process-number">01</div>
-                        <div class="process-content">
-                            <h3>Booking the experience</h3>
-                            <p>
-                                You book the Masterclass through our website
-                                or by contacting us directly. Once the date
-                                is confirmed, the experience is reserved for you.
-                            </p>
-                        </div>
-                    </article>
-
-
-                    <article class="process-item">
-                        <div class="process-number">02</div>
-                        <div class="process-content">
-                            <h3>Menu selection</h3>
-                            <p>
-                                After the booking, we get in touch to propose
-                                a menu. You will choose one appetizer and one
-                                main dish based on your preferences and
-                                dietary requirements.
-                            </p>
-                        </div>
-                    </article>
-
-
-                    <article class="process-item">
-                        <div class="process-number">03</div>
-                        <div class="process-content">
-                            <h3>Preparation before the class</h3>
-                            <p>
-                                We take care of all the planning. We bring all
-                                the ingredients and utensils. You just need a
-                                functional kitchen with a stovetop and oven.
-                            </p>
-                        </div>
-                    </article>
-
-
-                    <article class="process-item">
-                        <div class="process-number">04</div>
-                        <div class="process-content">
-                            <h3>The Masterclass at your home</h3>
-                            <p>
-                                On the day of the class, we come to your place
-                                and cook together step by step. You will prepare
-                                fresh pasta from scratch, learn techniques and
-                                taste along the way.
-                            </p>
-                        </div>
-                    </article>
-
-
-                    <article class="process-item">
-                        <div class="process-number">05</div>
-                        <div class="process-content">
-                            <h3>Wrapping up</h3>
-                            <p>
-                                Once the cooking is done, we leave you with
-                                practical knowledge, confidence in the recipes
-                                and ideas you can easily recreate at home.
-                            </p>
-                        </div>
-                    </article>
-
-
-                    <article class="process-item">
-                        <div class="process-number">06</div>
-                        <div class="process-content">
-                            <h3>Enjoying the meal</h3>
-                            <p>
-                                Last but not least, you sit down and enjoy
-                                what you have prepared together with your
-                                friends and family.
-                            </p>
-                        </div>
-                    </article>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- =========================
-             FINAL CTA
-        ========================== -->
-
-        <section class="masterclass-final-cta">
-            <div class="container">
-
-                <div class="final-cta-inner">
-
-                    <p class="eyebrow">READY TO COOK?</p>
-
-                    <h2>Let's make pasta together.</h2>
-
-                    <p>
-                        A private Italian cooking experience, brought directly
-                        to your home in Luxembourg.
-                    </p>
-
-                    <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-booking-open
-                    >
-                        Book a Masterclass
-                    </button>
-
-                </div>
-
-            </div>
-        </section>
-
-    </main>
+    </section>
 
 
     <!-- =========================
-         FOOTER
+         ABOUT THE EXPERIENCE
     ========================== -->
+    <section class="masterclass-about section">
 
-    <footer class="site-footer">
+      <div class="container">
 
-        <div class="container footer-grid">
+        <div class="section-heading">
 
-            <div class="footer-brand">
+          <p class="eyebrow">
+            The experience
+          </p>
 
-                <a href="../" class="site-logo" aria-label="GASEL Cooking home">
-                    <img
-                        src="../assets/images/logo/gasel-logo.png"
-                        alt="GASEL Cooking"
-                    >
-                </a>
-
-                <p>
-                    Authentic Italian cooking, made together.
-                </p>
-
-            </div>
-
-
-            <div class="footer-links">
-
-                <h3>Explore</h3>
-
-                <a href="../">Home</a>
-                <a href="./">Our Masterclass</a>
-                <a href="../about/">About Us</a>
-                <a href="../events/">Plan Your Event</a>
-                <a href="../gift-vouchers/">Gift a Masterclass</a>
-                <a href="../faq/">FAQ</a>
-
-            </div>
-
-
-            <div class="footer-contact">
-
-                <h3>Get in touch</h3>
-
-                <a href="tel:+393341660433">
-                    +39 334 166 0433
-                </a>
-
-                <a href="mailto:gaseltutoring@gmail.com">
-                    gaseltutoring@gmail.com
-                </a>
-
-                <p>
-                    Grand Duchy of Luxembourg
-                </p>
-
-            </div>
+          <h2>
+            Italian cooking,<br>
+            made together.
+          </h2>
 
         </div>
 
+        <div class="masterclass-about-grid">
 
-        <div class="container footer-bottom">
+          <div class="masterclass-about-text">
 
-            <p>
-                © 2026 GASEL Cooking. All rights reserved.
+            <p class="lead">
+              We bring everything you need to your home and guide you through
+              the preparation of a traditional Italian meal, from start to finish.
             </p>
 
-            <a href="../terms/">
-                Privacy & Terms
-            </a>
+            <p>
+              The masterclass is designed to be relaxed, practical and social.
+              You will learn how to make fresh pasta from scratch, prepare its
+              sauce and put together a few simple Italian dishes along the way.
+            </p>
+
+            <p>
+              No previous cooking experience is needed. We take care of the
+              ingredients and utensils, while you simply need a functional kitchen
+              with some working space and basic pots, pans, plates and cutlery.
+            </p>
+
+          </div>
+
+          <div class="masterclass-about-details">
+
+            <div class="detail-item">
+              <span class="detail-number">01</span>
+              <div>
+                <h3>We come to you</h3>
+                <p>
+                  The entire experience takes place in your home.
+                </p>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <span class="detail-number">02</span>
+              <div>
+                <h3>We bring the ingredients</h3>
+                <p>
+                  Flour, eggs, vegetables, cheese and everything else you need.
+                </p>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <span class="detail-number">03</span>
+              <div>
+                <h3>You cook with us</h3>
+                <p>
+                  Hands-on preparation, from the first ingredient to the finished dish.
+                </p>
+              </div>
+            </div>
+
+          </div>
 
         </div>
 
-    </footer>
+      </div>
+
+    </section>
 
 
     <!-- =========================
-         BOOKING POPUP
-         
-         Keep your existing booking popup here.
-         If it is already injected by main.js or another
-         component, leave that implementation unchanged.
+         MENU
     ========================== -->
+    <section
+      class="masterclass-menu section section-cream"
+      id="menu"
+    >
+
+      <div class="container">
+
+        <div class="section-heading centered">
+
+          <p class="eyebrow">
+            What's on the menu
+          </p>
+
+          <h2>
+            A taste of Italy
+          </h2>
+
+          <p>
+            The menu brings together a few Italian favourites, all prepared
+            from scratch during the masterclass.
+          </p>
+
+        </div>
+
+        <div class="menu-grid">
+
+          <article class="menu-card">
+
+            <div class="menu-card-number">
+              01
+            </div>
+
+            <h3>
+              Antipasto
+            </h3>
+
+            <p>
+              A simple Italian starter to enjoy while we prepare the rest
+              of the meal.
+            </p>
+
+          </article>
 
 
-    <script src="../assets/js/main.js"></script>
+          <article class="menu-card">
+
+            <div class="menu-card-number">
+              02
+            </div>
+
+            <h3>
+              Fresh pasta
+            </h3>
+
+            <p>
+              We make the pasta dough by hand, roll it out and shape fresh
+              pasta together.
+            </p>
+
+          </article>
+
+
+          <article class="menu-card">
+
+            <div class="menu-card-number">
+              03
+            </div>
+
+            <h3>
+              Sauce &amp; condiments
+            </h3>
+
+            <p>
+              A homemade sauce or condiment prepared to complement the
+              pasta we make together.
+            </p>
+
+          </article>
+
+
+          <article class="menu-card">
+
+            <div class="menu-card-number">
+              04
+            </div>
+
+            <h3>
+              Focaccia
+            </h3>
+
+            <p>
+              Two freshly prepared focaccias to share during the experience.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHAT'S INCLUDED
+    ========================== -->
+    <section class="masterclass-included section">
+
+      <div class="container">
+
+        <div class="included-grid">
+
+          <div class="included-heading">
+
+            <p class="eyebrow">
+              Everything included
+            </p>
+
+            <h2>
+              Just bring<br>
+              your appetite.
+            </h2>
+
+          </div>
+
+          <div class="included-list">
+
+            <div class="included-item">
+              <span>01</span>
+              <p>All ingredients for the masterclass</p>
+            </div>
+
+            <div class="included-item">
+              <span>02</span>
+              <p>All specialist utensils and equipment we bring with us</p>
+            </div>
+
+            <div class="included-item">
+              <span>03</span>
+              <p>Antipasto and fresh handmade pasta</p>
+            </div>
+
+            <div class="included-item">
+              <span>04</span>
+              <p>Two freshly prepared focaccias</p>
+            </div>
+
+            <div class="included-item">
+              <span>05</span>
+              <p>Two bottles of Italian wine</p>
+            </div>
+
+            <div class="included-item">
+              <span>06</span>
+              <p>Guidance throughout the entire experience</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BOOKING
+    ========================== -->
+    <section
+      class="masterclass-booking section section-yellow"
+      id="booking"
+    >
+
+      <div class="container">
+
+        <div class="booking-content">
+
+          <p class="eyebrow">
+            Book your experience
+          </p>
+
+          <h2>
+            An Italian evening<br>
+            at home.
+          </h2>
+
+          <p>
+            Gather your friends, family or colleagues and spend a few hours
+            cooking and enjoying Italian food together.
+          </p>
+
+          <div class="booking-prices">
+
+            <div class="price-item">
+              <span class="price">€79</span>
+              <span class="price-label">per person · 2 people</span>
+            </div>
+
+            <div class="price-item">
+              <span class="price">€65</span>
+              <span class="price-label">per person · 3–8 people</span>
+            </div>
+
+          </div>
+
+          <a
+            href="#booking"
+            class="btn btn-dark"
+            data-booking-open
+          >
+            Book a Masterclass
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         HOW IT WORKS
+    ========================== -->
+    <section class="masterclass-process section">
+
+      <div class="container">
+
+        <div class="section-heading centered">
+
+          <p class="eyebrow">
+            How it works
+          </p>
+
+          <h2>
+            From your kitchen<br>
+            to the dinner table.
+          </h2>
+
+        </div>
+
+        <div class="process-grid">
+
+          <div class="process-step">
+
+            <span class="process-number">
+              01
+            </span>
+
+            <h3>
+              Book
+            </h3>
+
+            <p>
+              Choose your date, tell us how many people are joining and
+              let us know if you are celebrating something special.
+            </p>
+
+          </div>
+
+
+          <div class="process-step">
+
+            <span class="process-number">
+              02
+            </span>
+
+            <h3>
+              We prepare
+            </h3>
+
+            <p>
+              We organise the ingredients and utensils and come to your home
+              ready to start cooking.
+            </p>
+
+          </div>
+
+
+          <div class="process-step">
+
+            <span class="process-number">
+              03
+            </span>
+
+            <h3>
+              You cook
+            </h3>
+
+            <p>
+              We guide you through every step while you make the dishes
+              together with your guests.
+            </p>
+
+          </div>
+
+
+          <div class="process-step">
+
+            <span class="process-number">
+              04
+            </span>
+
+            <h3>
+              You enjoy
+            </h3>
+
+            <p>
+              Sit down, pour a glass of wine and enjoy the meal you have
+              just prepared together.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL CTA
+    ========================== -->
+    <section class="masterclass-final-cta">
+
+      <div class="container">
+
+        <div class="final-cta-content">
+
+          <p class="eyebrow">
+            Ready to cook?
+          </p>
+
+          <h2>
+            Bring your people.<br>
+            We will bring Italy.
+          </h2>
+
+          <a
+            href="#booking"
+            class="btn btn-primary"
+            data-booking-open
+          >
+            Book a Masterclass
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+       Same structure as homepage
+  ========================== -->
+  <footer class="site-footer">
+
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+
+        <a
+          href="../"
+          class="site-logo"
+          aria-label="GASEL Cooking home"
+        >
+          <img
+            src="../assets/images/logo/gasel-logo.png"
+            width="1500"
+            height="400"
+            alt="GASEL Cooking"
+          >
+        </a>
+
+        <p>
+          Authentic Italian cooking experiences
+          in the comfort of your own home.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Explore
+        </h4>
+
+        <a href="./">
+          Masterclass
+        </a>
+
+        <a href="../events/">
+          Events
+        </a>
+
+        <a href="../gift-vouchers/">
+          Gift Vouchers
+        </a>
+
+        <a href="../about/">
+          About
+        </a>
+
+        <a href="../faq/">
+          FAQ
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Contact
+        </h4>
+
+        <a href="tel:+393341660433">
+          +39 334 166 0433
+        </a>
+
+        <a href="mailto:gaseltutoring@gmail.com">
+          gaseltutoring@gmail.com
+        </a>
+
+        <span>
+          Grand Duchy of Luxembourg
+        </span>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Book
+        </h4>
+
+        <span>
+          MON–FRI: 7PM–9PM
+        </span>
+
+        <span>
+          SAT–SUN: 11AM–1PM
+        </span>
+
+        <a
+          href="./"
+          class="footer-book-link"
+        >
+          Book a class →
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <span>
+        © 2026 GASEL Cooking
+      </span>
+
+      <div class="footer-bottom-links">
+
+        <a href="../terms/">
+          Terms &amp; Conditions
+        </a>
+
+        <a href="../faq/">
+          FAQ
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script src="../assets/js/main.js"></script>
 
 </body>
 </html>
