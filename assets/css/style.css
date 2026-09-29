@@ -276,6 +276,16 @@ p {
     color: var(--white);
 }
 
+.btn-dark {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.btn-dark:hover {
+    background: var(--black);
+    box-shadow: var(--shadow-soft);
+}
+
 
 /* =========================================================
    LINKS
@@ -404,12 +414,12 @@ p {
 .site-logo img {
     display: block;
 
-    width: 150px;
+    width: 165px;
     height: auto;
 }
 
 
-/* Desktop navigation */
+/* Homepage desktop navigation */
 
 .main-nav {
     display: flex;
@@ -458,6 +468,60 @@ p {
 
 .nav-link:hover::after,
 .nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/* Masterclass desktop navigation */
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+    margin-left: auto;
+}
+
+.desktop-nav a {
+    position: relative;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: var(--blue);
+
+    transition: color var(--transition-fast);
+}
+
+.desktop-nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--gold);
+
+    transform: scaleX(0);
+    transform-origin: right;
+
+    transition: transform var(--transition-normal);
+}
+
+.desktop-nav a:hover {
+    color: var(--brown);
+}
+
+.desktop-nav a:hover::after,
+.desktop-nav a.active::after {
     transform: scaleX(1);
     transform-origin: left;
 }
@@ -537,6 +601,10 @@ p {
     transform: translateY(3.75px) rotate(45deg);
 }
 
+.menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
 .menu-toggle.is-open span:last-child {
     transform: translateY(-3.75px) rotate(-45deg);
 }
@@ -552,15 +620,9 @@ p {
     background: var(--white);
 }
 
-.mobile-menu nav {
-    display: flex;
-    flex-direction: column;
+.mobile-menu a {
+    display: block;
 
-    padding-top: 16px;
-    padding-bottom: 28px;
-}
-
-.mobile-nav-link {
     margin-left: var(--container-padding);
     margin-right: var(--container-padding);
 
@@ -574,6 +636,10 @@ p {
     font-family: var(--font-heading);
     font-size: 28px;
     font-weight: 600;
+}
+
+.mobile-menu a.active {
+    color: var(--brown);
 }
 
 .mobile-menu-cta {
@@ -592,13 +658,14 @@ p {
     background: var(--blue);
     color: var(--white);
 
+    font-family: var(--font-body);
     font-size: 14px;
     font-weight: 600;
 }
 
 
 /* =========================================================
-   HERO
+   HOMEPAGE HERO
    ========================================================= */
 
 .hero {
@@ -1055,7 +1122,7 @@ p {
 
 
 /* =========================================================
-   INCLUDED
+   HOMEPAGE INCLUDED
    ========================================================= */
 
 .included {
@@ -1438,7 +1505,7 @@ p {
 
 
 /* =========================================================
-   FINAL CTA
+   HOMEPAGE FINAL CTA
    ========================================================= */
 
 .final-cta {
@@ -1564,6 +1631,10 @@ p {
     margin-bottom: 25px;
 }
 
+.footer-brand .site-logo img {
+    width: 165px;
+}
+
 .footer-brand p {
     color: rgba(255, 255, 255, 0.72);
 
@@ -1641,12 +1712,494 @@ p {
 
 
 /* =========================================================
+   MASTERCLASS PAGE
+   Matches the current masterclass/index.html
+   ========================================================= */
+
+
+/* =========================
+   MASTERCLASS HERO
+   ========================= */
+
+.masterclass-hero {
+    padding: 110px 0 120px;
+
+    background: var(--cream);
+}
+
+.masterclass-hero-content {
+    max-width: 850px;
+}
+
+.masterclass-hero h1 {
+    margin: 12px 0 26px;
+
+    color: var(--blue);
+
+    font-family: var(--font-heading);
+    font-size: clamp(58px, 8vw, 104px);
+    line-height: 0.92;
+    font-weight: 500;
+    letter-spacing: -0.035em;
+}
+
+.masterclass-hero .hero-description {
+    max-width: 680px;
+
+    margin-bottom: 34px;
+
+    color: var(--blue);
+
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* =========================
+   MASTERCLASS SHARED
+   ========================= */
+
+.masterclass-about .eyebrow,
+.masterclass-menu .eyebrow,
+.masterclass-included .eyebrow,
+.masterclass-booking .eyebrow,
+.masterclass-process .eyebrow,
+.masterclass-final-cta .eyebrow {
+    margin-bottom: 16px;
+}
+
+.section-heading {
+    max-width: 720px;
+
+    margin-bottom: 55px;
+}
+
+.section-heading.centered {
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin: 10px 0 18px;
+
+    color: var(--blue);
+
+    font-family: var(--font-heading);
+    font-size: clamp(44px, 6vw, 72px);
+    line-height: 0.98;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+}
+
+.section-heading.centered > p:last-child {
+    max-width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   MASTERCLASS ABOUT
+   ========================= */
+
+.masterclass-about {
+    background: var(--white);
+}
+
+.masterclass-about-grid {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+
+    gap: 90px;
+
+    align-items: start;
+}
+
+.masterclass-about-text {
+    max-width: 760px;
+}
+
+.masterclass-about-text .lead {
+    margin-bottom: 28px;
+
+    font-family: var(--font-heading);
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 500;
+
+    color: var(--blue);
+}
+
+.masterclass-about-text p:not(.lead) {
+    margin-bottom: 22px;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.masterclass-about-details {
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid rgba(39, 60, 96, 0.25);
+}
+
+.detail-item {
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid rgba(39, 60, 96, 0.25);
+}
+
+.detail-item > span {
+    color: var(--brown);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.detail-item h3 {
+    margin-bottom: 8px;
+
+    color: var(--blue);
+
+    font-family: var(--font-heading);
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.detail-item p {
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* =========================
+   MASTERCLASS MENU
+   ========================= */
+
+.section-cream {
+    background: var(--cream);
+}
+
+.masterclass-menu {
+    background: var(--cream);
+}
+
+.menu-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+}
+
+.menu-card {
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    gap: 25px;
+
+    padding: 42px;
+
+    background: var(--white);
+}
+
+.menu-card-number {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    line-height: 1;
+
+    color: var(--brown);
+}
+
+.menu-card h3 {
+    margin: 0 0 14px;
+
+    color: var(--blue);
+
+    font-family: var(--font-heading);
+    font-size: 38px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.menu-card p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   MASTERCLASS INCLUDED
+   ========================= */
+
+.masterclass-included {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.masterclass-included .section-heading h2 {
+    color: var(--white);
+}
+
+.masterclass-included .section-heading {
+    margin-bottom: 55px;
+}
+
+.masterclass-included .included-grid {
+    display: grid;
+
+    grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+.masterclass-included .included-list {
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.masterclass-included .included-item {
+    display: grid;
+
+    grid-template-columns: 45px 1fr;
+
+    gap: 20px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.masterclass-included .included-item > span {
+    color: var(--yellow);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+
+    opacity: 0.85;
+}
+
+.masterclass-included .included-item p {
+    color: var(--white);
+
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+
+/* =========================
+   MASTERCLASS BOOKING
+   ========================= */
+
+.masterclass-booking {
+    background: var(--yellow);
+}
+
+.booking-content {
+    max-width: 760px;
+}
+
+.booking-content h2 {
+    max-width: 650px;
+
+    margin: 10px 0 22px;
+
+    color: var(--blue);
+
+    font-family: var(--font-heading);
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 0.95;
+    font-weight: 500;
+}
+
+.booking-content > p:not(.eyebrow) {
+    max-width: 600px;
+
+    margin-bottom: 35px;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.booking-prices {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 50px;
+
+    margin-bottom: 40px;
+}
+
+.price-item {
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(39, 60, 96, 0.35);
+}
+
+.price-item .price {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--blue);
+
+    font-family: var(--font-heading);
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.price-item .price-label {
+    display: block;
+
+    color: var(--black);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   MASTERCLASS PROCESS
+   ========================= */
+
+.masterclass-process {
+    background: var(--white);
+}
+
+.process-grid {
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 45px 60px;
+}
+
+.process-step {
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(39, 60, 96, 0.3);
+}
+
+.process-number {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--brown);
+
+    font-family: var(--font-heading);
+    font-size: 36px;
+    line-height: 1;
+}
+
+.process-step h3 {
+    margin-bottom: 12px;
+
+    color: var(--blue);
+
+    font-family: var(--font-heading);
+    font-size: 34px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.process-step p {
+    max-width: 500px;
+
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+
+/* =========================
+   MASTERCLASS FINAL CTA
+   ========================= */
+
+.masterclass-final-cta {
+    padding: 110px 0;
+
+    background: var(--cream);
+}
+
+.masterclass-final-cta .final-cta-content {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: var(--blue);
+}
+
+.masterclass-final-cta .final-cta-content h2 {
+    margin: 10px 0 20px;
+
+    color: var(--blue);
+
+    font-family: var(--font-heading);
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 0.95;
+    font-weight: 500;
+}
+
+.masterclass-final-cta .final-cta-content p:not(.eyebrow) {
+    max-width: 580px;
+
+    margin: 0 auto 30px;
+
+    color: var(--black);
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
    TABLET
    ========================================================= */
 
 @media (max-width: 1000px) {
 
-    .main-nav {
+    .main-nav,
+    .desktop-nav {
         gap: 20px;
     }
 
@@ -1688,7 +2241,7 @@ p {
     }
 
 
-    /* Hero */
+    /* Homepage hero */
 
     .hero {
         min-height: 650px;
@@ -1703,7 +2256,7 @@ p {
     }
 
 
-    /* Intro */
+    /* Homepage intro */
 
     .intro-inner {
         grid-template-columns: 1fr 1fr;
@@ -1747,7 +2300,7 @@ p {
     }
 
 
-    /* Included */
+    /* Homepage included */
 
     .included-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1801,6 +2354,25 @@ p {
         grid-column: 2 / 4;
     }
 
+
+    /* Masterclass */
+
+    .masterclass-about-grid {
+        grid-template-columns: 1fr 0.8fr;
+
+        gap: 55px;
+    }
+
+    .masterclass-included .included-grid {
+        grid-template-columns: 1fr 1.3fr;
+
+        gap: 55px;
+    }
+
+    .process-grid {
+        gap: 40px;
+    }
+
 }
 
 
@@ -1815,6 +2387,7 @@ p {
     }
 
     .main-nav,
+    .desktop-nav,
     .header-cta {
         display: none;
     }
@@ -1828,7 +2401,69 @@ p {
     }
 
     .site-logo img {
-        width: 135px;
+        width: 145px;
+    }
+
+
+    /* Masterclass */
+
+    .masterclass-hero {
+        padding: 80px 0 85px;
+    }
+
+    .masterclass-hero h1 {
+        font-size: clamp(52px, 14vw, 76px);
+    }
+
+    .masterclass-hero .hero-description {
+        font-size: 17px;
+    }
+
+    .section {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .masterclass-about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-card {
+        padding: 30px;
+    }
+
+    .masterclass-included .included-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .masterclass-included .section-heading {
+        margin-bottom: 0;
+    }
+
+    .booking-prices {
+        gap: 35px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+
+        gap: 38px;
+    }
+
+    .masterclass-final-cta {
+        padding: 80px 0;
     }
 
 }
@@ -1876,7 +2511,7 @@ p {
     }
 
 
-    /* Hero */
+    /* Homepage hero */
 
     .hero {
         min-height: 680px;
@@ -2076,7 +2711,7 @@ p {
     }
 
 
-    /* Final CTA */
+    /* Homepage final CTA */
 
     .final-cta {
         min-height: 620px;
@@ -2130,6 +2765,94 @@ p {
 
     .footer-bottom-links {
         gap: 18px;
+    }
+
+
+    /* Masterclass */
+
+    .masterclass-hero {
+        padding: 65px 0 70px;
+    }
+
+    .masterclass-hero h1 {
+        font-size: 52px;
+    }
+
+    .masterclass-hero .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .section-heading h2 {
+        font-size: 46px;
+    }
+
+    .masterclass-about-text .lead {
+        font-size: 26px;
+    }
+
+    .masterclass-about-text p:not(.lead) {
+        font-size: 16px;
+    }
+
+    .detail-item {
+        grid-template-columns: 40px 1fr;
+
+        gap: 15px;
+
+        padding: 22px 0;
+    }
+
+    .detail-item h3 {
+        font-size: 28px;
+    }
+
+    .menu-card {
+        grid-template-columns: 45px 1fr;
+
+        gap: 15px;
+
+        padding: 25px;
+    }
+
+    .menu-card-number {
+        font-size: 32px;
+    }
+
+    .menu-card h3 {
+        font-size: 32px;
+    }
+
+    .booking-content h2 {
+        font-size: 48px;
+    }
+
+    .booking-prices {
+        flex-direction: column;
+
+        gap: 22px;
+
+        margin-bottom: 35px;
+    }
+
+    .price-item .price {
+        font-size: 42px;
+    }
+
+    .process-step h3 {
+        font-size: 29px;
+    }
+
+    .masterclass-final-cta .final-cta-content h2 {
+        font-size: clamp(48px, 13vw, 68px);
     }
 
 }
@@ -2201,603 +2924,35 @@ p {
 
     .footer-bottom-links {
         flex-direction: column;
+
         gap: 7px;
     }
 
-}
 
-/* =========================================================
-   MASTERCLASS PAGE
-========================================================= */
-
-
-/* =========================
-   HERO
-========================= */
-
-.masterclass-hero {
-    padding: 110px 0 120px;
-    background: var(--pale-cream, #EBE9B2);
-}
-
-.masterclass-hero-content {
-    max-width: 850px;
-}
-
-.masterclass-hero h1 {
-    margin: 12px 0 24px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(58px, 8vw, 104px);
-    line-height: 0.92;
-    font-weight: 500;
-    letter-spacing: -0.035em;
-    color: #273C60;
-}
-
-.masterclass-hero .hero-text {
-    max-width: 680px;
-    margin: 0 0 34px;
-    font-size: 19px;
-    line-height: 1.7;
-    color: #273C60;
-}
-
-
-/* =========================
-   SHARED PAGE ELEMENTS
-========================= */
-
-.masterclass-page .eyebrow,
-.masterclass-hero .eyebrow,
-.masterclass-about .eyebrow,
-.masterclass-menu .eyebrow,
-.masterclass-included .eyebrow,
-.masterclass-booking .eyebrow,
-.masterclass-process .eyebrow,
-.masterclass-final-cta .eyebrow {
-    margin: 0;
-    font-family: "DM Sans", sans-serif;
-    font-size: 12px;
-    line-height: 1.3;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-}
-
-.section-heading {
-    max-width: 720px;
-    margin-bottom: 55px;
-}
-
-.section-heading.centered {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.section-heading h2 {
-    margin: 10px 0 18px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(44px, 6vw, 72px);
-    line-height: 0.98;
-    font-weight: 500;
-    letter-spacing: -0.025em;
-    color: #273C60;
-}
-
-.section-heading > p:last-child {
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-.section {
-    padding: 105px 0;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.masterclass-about {
-    background: #FFFFFF;
-}
-
-.masterclass-about-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.7fr);
-    gap: 90px;
-    align-items: start;
-}
-
-.masterclass-about-copy {
-    max-width: 760px;
-}
-
-.masterclass-about-copy p {
-    margin: 0 0 25px;
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.masterclass-about-note {
-    position: sticky;
-    top: 120px;
-}
-
-.info-card {
-    padding: 40px;
-    background: #EDDD88;
-}
-
-.info-card-label {
-    display: block;
-    margin-bottom: 14px;
-    font-family: "DM Sans", sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-}
-
-.info-card h3 {
-    margin: 0 0 18px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 40px;
-    line-height: 1;
-    font-weight: 500;
-    color: #273C60;
-}
-
-.info-card p {
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.7;
-}
-
-
-/* =========================
-   MENU
-========================= */
-
-.section-cream {
-    background: #EBE9B2;
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-    max-width: 1050px;
-    margin: 0 auto;
-}
-
-.menu-card {
-    display: grid;
-    grid-template-columns: 70px 1fr;
-    gap: 25px;
-    padding: 42px;
-    background: #FFFFFF;
-}
-
-.menu-card-number {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 40px;
-    line-height: 1;
-    color: #BA833A;
-}
-
-.menu-card-label {
-    margin: 0 0 8px;
-    font-family: "DM Sans", sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-}
-
-.menu-card h3 {
-    margin: 0 0 14px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 38px;
-    line-height: 1;
-    font-weight: 500;
-    color: #273C60;
-}
-
-.menu-card p:last-child {
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.7;
-}
-
-
-/* =========================
-   WHAT'S INCLUDED
-========================= */
-
-.masterclass-included {
-    background: #273C60;
-    color: #FFFFFF;
-}
-
-.masterclass-included .section-heading h2 {
-    color: #FFFFFF;
-}
-
-.masterclass-included .section-heading {
-    margin-bottom: 0;
-}
-
-.included-grid {
-    display: grid;
-    grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
-    gap: 100px;
-    align-items: start;
-}
-
-.included-list {
-    border-top: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.included-item {
-    display: grid;
-    grid-template-columns: 45px 1fr;
-    gap: 20px;
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.included-item span {
-    font-family: "DM Sans", sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    opacity: 0.75;
-}
-
-.included-item p {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.55;
-}
-
-
-/* =========================
-   BOOKING
-========================= */
-
-.masterclass-booking {
-    background: #EDDD88;
-}
-
-.booking-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(350px, 0.7fr);
-    gap: 90px;
-    align-items: center;
-}
-
-.booking-intro h2 {
-    max-width: 650px;
-    margin: 10px 0 22px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(48px, 6vw, 76px);
-    line-height: 0.95;
-    font-weight: 500;
-    color: #273C60;
-}
-
-.booking-intro > p:not(.eyebrow) {
-    max-width: 600px;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-.booking-meta {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 1fr));
-    gap: 25px;
-    max-width: 600px;
-    margin-top: 45px;
-}
-
-.booking-meta-item {
-    padding-top: 15px;
-    border-top: 1px solid rgba(39, 60, 96, 0.35);
-}
-
-.booking-meta-item span {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
-.booking-meta-item strong {
-    display: block;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 25px;
-    line-height: 1.1;
-    font-weight: 500;
-    color: #273C60;
-}
-
-.booking-card {
-    padding: 42px;
-    background: #FFFFFF;
-    box-shadow: 0 20px 50px rgba(39, 60, 96, 0.12);
-}
-
-.booking-price {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    padding-bottom: 28px;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #EBE9B2;
-}
-
-.booking-price span {
-    display: block;
-    margin-bottom: 7px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
-.booking-price strong {
-    display: block;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 38px;
-    line-height: 1;
-    font-weight: 500;
-    color: #273C60;
-}
-
-.booking-price small {
-    font-family: "DM Sans", sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.booking-card-text {
-    margin: 0 0 28px;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-.btn-full {
-    width: 100%;
-}
-
-
-/* =========================
-   PROCESS
-========================= */
-
-.masterclass-process {
-    background: #FFFFFF;
-}
-
-.process-list {
-    max-width: 950px;
-    margin: 0 auto;
-    border-top: 1px solid #273C60;
-}
-
-.process-item {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 35px;
-    padding: 38px 0;
-    border-bottom: 1px solid rgba(39, 60, 96, 0.25);
-}
-
-.process-number {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 36px;
-    line-height: 1;
-    color: #BA833A;
-}
-
-.process-content h3 {
-    margin: 0 0 10px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 34px;
-    line-height: 1;
-    font-weight: 500;
-    color: #273C60;
-}
-
-.process-content p {
-    max-width: 720px;
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.75;
-}
-
-
-/* =========================
-   FINAL CTA
-========================= */
-
-.masterclass-final-cta {
-    padding: 110px 0;
-    background: #EBE9B2;
-}
-
-.final-cta-inner {
-    max-width: 760px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.final-cta-inner h2 {
-    margin: 10px 0 20px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(48px, 7vw, 82px);
-    line-height: 0.95;
-    font-weight: 500;
-    color: #273C60;
-}
-
-.final-cta-inner p:not(.eyebrow) {
-    max-width: 580px;
-    margin: 0 auto 30px;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 850px) {
-
-    .masterclass-hero {
-        padding: 80px 0 85px;
-    }
+    /* Masterclass */
 
     .masterclass-hero h1 {
-        font-size: clamp(52px, 14vw, 76px);
-    }
-
-    .masterclass-hero .hero-text {
-        font-size: 17px;
-    }
-
-    .section {
-        padding: 75px 0;
-    }
-
-    .section-heading {
-        margin-bottom: 40px;
-    }
-
-    .masterclass-about-grid,
-    .included-grid,
-    .booking-layout {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .masterclass-about-note {
-        position: static;
-    }
-
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .menu-card {
-        padding: 30px;
-    }
-
-    .masterclass-included .section-heading {
-        margin-bottom: 0;
-    }
-
-    .booking-card {
-        padding: 30px;
-    }
-
-    .booking-price {
-        gap: 15px;
-    }
-
-    .booking-price strong {
-        font-size: 32px;
-    }
-
-    .process-item {
-        grid-template-columns: 55px 1fr;
-        gap: 20px;
-        padding: 30px 0;
-    }
-
-    .process-content h3 {
-        font-size: 29px;
-    }
-
-    .masterclass-final-cta {
-        padding: 80px 0;
-    }
-}
-
-
-@media (max-width: 560px) {
-
-    .masterclass-hero {
-        padding: 65px 0 70px;
-    }
-
-    .masterclass-hero h1 {
-        font-size: 52px;
+        font-size: 48px;
     }
 
     .section-heading h2 {
-        font-size: 46px;
+        font-size: 42px;
     }
 
-    .masterclass-about-copy p {
-        font-size: 16px;
-    }
-
-    .info-card {
-        padding: 30px;
-    }
-
-    .info-card h3 {
-        font-size: 34px;
+    .masterclass-about-text .lead {
+        font-size: 24px;
     }
 
     .menu-card {
-        grid-template-columns: 45px 1fr;
-        gap: 15px;
-        padding: 25px;
+        padding: 22px;
     }
 
-    .menu-card-number {
-        font-size: 32px;
+    .booking-content h2 {
+        font-size: 44px;
     }
 
-    .menu-card h3 {
-        font-size: 32px;
+    .process-grid {
+        gap: 32px;
     }
 
-    .booking-meta {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px 15px;
-    }
-
-    .booking-meta-item strong {
-        font-size: 22px;
-    }
-
-    .booking-card {
-        padding: 25px;
-    }
-
-    .booking-price {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .process-item {
-        grid-template-columns: 42px 1fr;
-        gap: 15px;
-    }
-
-    .process-number {
-        font-size: 30px;
-    }
-
-    .process-content h3 {
-        font-size: 27px;
-    }
 }
