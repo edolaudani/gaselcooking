@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+
+/* =========================================================
+   DESIGN SYSTEM
+   ========================================================= */
+
+:root {
+    /* Brand colours */
+    --yellow: #EDDD88;
+    --gold: #E1C15B;
+    --cream: #EBE9B2;
+    --brown: #BA833A;
+    --blue: #273C60;
+    --black: #000000;
+    --white: #FFFFFF;
+
+    /* Typography */
+    --font-heading: "Cormorant Garamond", Georgia, serif;
+    --font-body: "DM Sans", Arial, sans-serif;
+
+    /* Layout */
+    --container-width: 1200px;
+    --container-padding: 32px;
+
+    /* Sections */
+    --section-padding: 110px;
+    --section-padding-mobile: 70px;
+
+    /* Radius */
+    --radius-small: 6px;
+    --radius-medium: 12px;
+    --radius-large: 20px;
+    --radius-pill: 999px;
+
+    /* Shadows */
+    --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 12px 40px rgba(0, 0, 0, 0.12);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: var(--white);
+    color: var(--black);
+
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.05;
+
+    color: var(--blue);
+}
+
+h1 {
+    font-size: clamp(56px, 7vw, 96px);
+    letter-spacing: -0.03em;
+}
+
+h2 {
+    font-size: clamp(44px, 5.2vw, 70px);
+    letter-spacing: -0.025em;
+}
+
+h3 {
+    font-size: clamp(30px, 3vw, 42px);
+}
+
+h4 {
+    font-size: 28px;
+}
+
+p {
+    margin: 0;
+}
+
+.text-large {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.text-small {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    color: var(--brown);
+}
+
+
+/* =========================================================
+   CONTAINER / SECTIONS
+   ========================================================= */
+
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+.section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.section-header {
+    max-width: 720px;
+    margin-bottom: 60px;
+}
+
+.section-header.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.section-header > p {
+    margin-top: 24px;
+    max-width: 650px;
+
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.section-header.center > p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.link {
+    position: relative;
+
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.link::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+
+    width: 100%;
+    height: 1px;
+
+    background: currentColor;
+
+    transform: scaleX(0);
+    transform-origin: right;
+
+    transition: transform var(--transition-normal);
+}
+
+.link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/* =========================================================
+   BACKGROUND / TEXT UTILITIES
+   ========================================================= */
+
+.bg-white {
+    background: var(--white);
+}
+
+.bg-yellow {
+    background: var(--yellow);
+}
+
+.bg-gold {
+    background: var(--gold);
+}
+
+.bg-cream {
+    background: var(--cream);
+}
+
+.bg-blue {
+    background: var(--blue);
+}
+
+.bg-brown {
+    background: var(--brown);
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.text-blue {
+    color: var(--blue);
+}
+
+.text-black {
+    color: var(--black);
+}
+
+.text-brown {
+    color: var(--brown);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+    outline: 2px solid var(--brown);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   GLOBAL RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    :root {
+        --container-padding: 24px;
+        --section-padding: 85px;
+    }
+
+    .section-header {
+        margin-bottom: 45px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    :root {
+        --container-padding: 20px;
+        --section-padding: var(--section-padding-mobile);
+    }
+
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: clamp(46px, 14vw, 68px);
+    }
+
+    h2 {
+        font-size: clamp(40px, 11vw, 56px);
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    .text-large {
+        font-size: 18px;
+    }
+
+    .btn {
+        min-height: 50px;
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+}
