@@ -548,153 +548,37 @@
         </section>
 
 
-        <!-- =========================
-             BOOKING
+<!-- =========================
+             BOOKING CALENDAR (INLINE)
         ========================== -->
 
-        <section
-            class="masterclass-booking section"
-            id="book"
-        >
+        <section class="booking-section" id="book-a-class">
 
             <div class="container">
 
-                <div class="booking-layout">
+                <div class="section-heading centered">
 
+                    <p class="eyebrow">
+                        LET'S COOK TOGETHER
+                    </p>
 
-                    <div class="booking-intro">
+                    <h2>
+                        Book your cooking experience
+                    </h2>
 
-                        <p class="eyebrow">
-                            BOOK YOUR EXPERIENCE
-                        </p>
-
-                        <h2>
-                            Handmade Pasta Masterclass
-                        </h2>
-
-                        <p>
-                            Tell us when you would like to cook together and
-                            we will get back to you to confirm availability
-                            and finalise the details.
-                        </p>
-
-
-                        <div class="booking-meta">
-
-
-                            <div class="booking-meta-item">
-
-                                <span>
-                                    Duration
-                                </span>
-
-                                <strong>
-                                    2 Hours
-                                </strong>
-
-                            </div>
-
-
-                            <div class="booking-meta-item">
-
-                                <span>
-                                    Format
-                                </span>
-
-                                <strong>
-                                    In Person
-                                </strong>
-
-                            </div>
-
-
-                            <div class="booking-meta-item">
-
-                                <span>
-                                    Location
-                                </span>
-
-                                <strong>
-                                    Your Home
-                                </strong>
-
-                            </div>
-
-
-                            <div class="booking-meta-item">
-
-                                <span>
-                                    Group Size
-                                </span>
-
-                                <strong>
-                                    2–8 People
-                                </strong>
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="booking-card">
-
-
-                        <div class="booking-price">
-
-
-                            <div>
-
-                                <span>
-                                    2 people
-                                </span>
-
-                                <strong>
-                                    €79
-                                    <small>/ person</small>
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    3–8 people
-                                </span>
-
-                                <strong>
-                                    €65
-                                    <small>/ person</small>
-                                </strong>
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="booking-card-text">
-                            Booking is requested through our website.
-                            Once we receive your request, we will get in touch
-                            to confirm availability and finalise the details together.
-                        </p>
-
-
-                        <button
-                            type="button"
-                            class="btn btn-primary btn-full"
-                            data-booking-open
-                        >
-                            Book a Masterclass
-                        </button>
-
-
-                    </div>
+                    <p>
+                        Choose a preferred date and time for your Italian cooking
+                        experience. All requests are subject to confirmation by GASEL Cooking.
+                    </p>
 
                 </div>
+
+                <!-- Cal inline embed container -->
+                <div
+                    style="width:100%;height:100%;overflow:scroll"
+                    id="my-cal-inline-gasel-cooking-masterclass"
+                    class="cal-inline-booking"
+                ></div>
 
             </div>
 
@@ -1022,14 +906,72 @@
     </footer>
 
 
-    <!-- =========================
-         BOOKING POPUP
-
-         Keep your existing booking popup here.
-         If it is already injected by main.js or another
-         component, leave that implementation unchanged.
+<!-- =========================
+         CAL.COM BOOKING (INLINE + FLOATING POPUP)
     ========================== -->
 
+    <script type="text/javascript">
+      (function (C, A, L) {
+        let p = function (a, ar) { a.q.push(ar); };
+        let d = C.document;
+        C.Cal = C.Cal || function () {
+          let cal = C.Cal;
+          let ar = arguments;
+          if (!cal.loaded) {
+            cal.ns = {};
+            cal.q = cal.q || [];
+            d.head.appendChild(d.createElement("script")).src = A;
+            cal.loaded = true;
+          }
+          if (ar[0] === L) {
+            const api = function () { p(api, arguments); };
+            const namespace = ar[1];
+            api.q = api.q || [];
+            if (typeof namespace === "string") {
+              cal.ns[namespace] = cal.ns[namespace] || api;
+              p(cal.ns[namespace], ar);
+              p(cal, ["initNamespace", namespace]);
+            } else p(cal, ar);
+            return;
+          }
+          p(cal, ar);
+        };
+      })(window, "https://app.cal.com/embed/embed.js", "init");
+
+      Cal("init", "gasel-cooking-masterclass", { origin: "https://app.cal.com" });
+      Cal.config = Cal.config || {};
+      Cal.config.forwardQueryParams = true;
+
+      /* 1. Inline embed */
+      Cal.ns["gasel-cooking-masterclass"]("inline", {
+        elementOrSelector: "#my-cal-inline-gasel-cooking-masterclass",
+        config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" },
+        calLink: "gaselcooking/gasel-cooking-masterclass"
+      });
+
+      /* 2. Floating popup button */
+      Cal.ns["gasel-cooking-masterclass"]("floatingButton", {
+        calLink: "gaselcooking/gasel-cooking-masterclass",
+        config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" }
+      });
+
+      /* 3. Shared UI settings */
+      Cal.ns["gasel-cooking-masterclass"]("ui", {
+        "hideEventTypeDetails": false,
+        "layout": "month_view"
+      });
+
+      /* 4. Connect existing page buttons (data-booking-open) to open the popup */
+      document.querySelectorAll("[data-booking-open]").forEach(function (button) {
+        button.addEventListener("click", function (event) {
+          event.preventDefault();
+          Cal.ns["gasel-cooking-masterclass"]("modal", {
+            calLink: "gaselcooking/gasel-cooking-masterclass",
+            config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" }
+          });
+        });
+      });
+    </script>
 
     <script src="../assets/js/main.js"></script>
 
