@@ -694,6 +694,37 @@
     line-height: 1.7;
 }
 
+/* =========================================================
+   CAL.COM BOOKING SECTION
+   ========================================================= */
+
+.booking-section {
+    padding: 80px 0;
+    background: #ebe9b2;
+}
+
+.booking-section .section-heading {
+    max-width: 720px;
+    margin: 0 auto 36px;
+    text-align: center;
+}
+
+.booking-section .section-heading h2 {
+    margin-bottom: 16px;
+}
+
+.booking-section .section-heading p:not(.eyebrow) {
+    line-height: 1.7;
+}
+
+.cal-inline-booking {
+    width: 100%;
+    min-height: 700px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
 
 /* =========================================================
    RESPONSIVE
@@ -1017,5 +1048,15 @@
 
     .process-list {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .booking-section {
+        padding: 52px 0;
+    }
+
+    .cal-inline-booking {
+        min-height: 650px;
     }
 }
