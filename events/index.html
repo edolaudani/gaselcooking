@@ -18,55 +18,27 @@
 
     <link
         rel="icon"
+        type="image/png"
         href="../assets/images/logo/gasel-logo.png"
     >
 
-
-    <!-- =====================================================
-         FONTS
-    ====================================================== -->
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
-
-    <!-- =====================================================
-         CSS
-    ====================================================== -->
-
-    <link
-        rel="stylesheet"
-        href="../assets/css/global.css"
-    >
-
-    <link
-        rel="stylesheet"
-        href="../assets/css/components.css"
-    >
-
-    <link
-        rel="stylesheet"
-        href="../assets/css/events.css"
-    >
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/events.css">
 
 </head>
 
-
 <body>
-
 
     <!-- =====================================================
          HEADER
@@ -76,114 +48,103 @@
 
         <div class="container header-inner">
 
-
             <a
                 href="../"
                 class="site-logo"
                 aria-label="GASEL Cooking home"
             >
-
                 <img
                     src="../assets/images/logo/gasel-logo.png"
                     width="1500"
                     height="400"
                     alt="GASEL Cooking"
                 >
-
             </a>
 
-
             <nav
-                class="desktop-nav"
+                class="desktop-nav main-nav"
                 aria-label="Main navigation"
             >
-
-                <a href="../">
+                <a href="../" class="nav-link">
                     Home
                 </a>
 
-                <a href="../masterclass/">
+                <a href="../masterclass/" class="nav-link">
                     Our Masterclass
                 </a>
 
-                <a href="../about/">
+                <a href="../about/" class="nav-link">
                     About Us
                 </a>
 
                 <a
                     href="./"
-                    class="active"
+                    class="nav-link active"
                 >
                     Plan Your Event
                 </a>
 
-                <a href="../gift-vouchers/">
+                <a href="../gift-vouchers/" class="nav-link">
                     Gift a Masterclass
                 </a>
 
-                <a href="../faq/">
+                <a href="../faq/" class="nav-link">
                     FAQ
                 </a>
-
             </nav>
-
 
             <button
                 class="menu-toggle"
                 type="button"
                 aria-label="Open menu"
                 aria-expanded="false"
+                aria-controls="mobile-menu"
             >
-
                 <span></span>
                 <span></span>
                 <span></span>
-
             </button>
 
         </div>
 
-
-        <!-- =================================================
-             MOBILE NAV
-        ================================================== -->
-
-        <div class="mobile-menu">
-
-            <a href="../">
+        <!-- Mobile navigation -->
+        <div
+            class="mobile-menu"
+            id="mobile-menu"
+            aria-label="Mobile navigation"
+        >
+            <a href="../" class="mobile-nav-link">
                 Home
             </a>
 
-            <a href="../masterclass/">
+            <a href="../masterclass/" class="mobile-nav-link">
                 Our Masterclass
             </a>
 
-            <a href="../about/">
+            <a href="../about/" class="mobile-nav-link">
                 About Us
             </a>
 
             <a
                 href="./"
-                class="active"
+                class="mobile-nav-link active"
             >
                 Plan Your Event
             </a>
 
-            <a href="../gift-vouchers/">
+            <a href="../gift-vouchers/" class="mobile-nav-link">
                 Gift a Masterclass
             </a>
 
-            <a href="../faq/">
+            <a href="../faq/" class="mobile-nav-link">
                 FAQ
             </a>
-
         </div>
 
     </header>
 
 
     <main>
-
 
         <!-- =================================================
              HERO
@@ -192,16 +153,14 @@
         <section class="events-hero">
 
             <div class="events-hero-background"></div>
-
             <div class="events-hero-overlay"></div>
-
 
             <div class="container">
 
                 <div class="events-hero-content">
 
                     <p class="eyebrow">
-                        PRIVATE EVENTS
+                        PRIVATE EVENTS & CELEBRATIONS
                     </p>
 
                     <h1>
@@ -210,8 +169,9 @@
 
                     <p class="hero-description">
                         From birthdays and dinner parties to team events and
-                        special evenings with friends, we bring a private
-                        Italian cooking experience directly to your home.
+                        special evenings with friends, we bring a private,
+                        hands-on Italian cooking experience directly to your
+                        home or chosen venue in Luxembourg.
                     </p>
 
                     <div class="hero-actions">
@@ -219,10 +179,17 @@
                         <button
                             type="button"
                             class="btn btn-primary"
-                            data-booking-open
+                            data-event-modal-open
                         >
                             Plan Your Event
                         </button>
+
+                        <a
+                            href="#occasions"
+                            class="btn btn-secondary events-hero-secondary"
+                        >
+                            Explore Occasions
+                        </a>
 
                     </div>
 
@@ -234,122 +201,94 @@
 
 
         <!-- =================================================
-             INTRO
+             INTRO + PORTRAIT IMAGE
         ================================================== -->
 
         <section class="events-intro section">
 
             <div class="container">
 
-                <div class="section-heading centered">
-
-                    <p class="eyebrow">
-                        MADE FOR YOUR OCCASION
-                    </p>
-
-                    <h2>
-                        One experience, your way.
-                    </h2>
-
-                    <p>
-                        The format, menu and pace can all be adapted to the
-                        occasion and the people around the table.
-                    </p>
-
-                </div>
-
-
                 <div class="events-intro-grid">
-
 
                     <div class="events-intro-text">
 
+                        <p class="eyebrow">
+                            MADE FOR YOUR OCCASION
+                        </p>
+
+                        <h2>
+                            One experience, shaped around your table.
+                        </h2>
+
                         <p class="lead">
                             Cooking together gives everyone something to do,
-                            talk about and enjoy.
+                            talk about and enjoy from the moment the evening starts.
                         </p>
 
                         <p>
-                            We take care of the ingredients, recipes and
-                            preparation, while you and your guests get to
-                            cook together and enjoy the evening.
+                            We take care of the ingredients, utensils, recipes
+                            and preparation, while you and your guests roll up
+                            your sleeves, make fresh pasta from scratch and
+                            share a relaxed Italian meal together.
                         </p>
 
                         <p>
-                            Whether you are celebrating something special,
-                            bringing colleagues together or simply looking
-                            for a different evening with friends, we can
-                            shape the experience around your group.
+                            Whether you are celebrating a birthday, bringing
+                            colleagues together for an informal team activity
+                            or hosting friends at home without the stress of
+                            cooking alone, we adapt the menu and pace to your group.
                         </p>
+
+                        <div class="events-intro-details">
+
+                            <div class="event-detail">
+                                <span>01</span>
+                                <div>
+                                    <h3>Exclusively for your group</h3>
+                                    <p>
+                                        Every event is completely private and
+                                        hosted just for the people you invite.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="event-detail">
+                                <span>02</span>
+                                <div>
+                                    <h3>At your home or venue</h3>
+                                    <p>
+                                        We travel directly to your kitchen or
+                                        event space with the ingredients and tools.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="event-detail">
+                                <span>03</span>
+                                <div>
+                                    <h3>Tailored menu & pace</h3>
+                                    <p>
+                                        We adapt the dishes to your tastes,
+                                        schedule and any dietary requirements.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
 
                     </div>
 
 
-                    <div class="events-intro-details">
+                    <div class="events-intro-media">
 
-                        <div class="event-detail">
-
-                            <span>
-                                01
-                            </span>
-
-                            <div>
-
-                                <h3>
-                                    Private
-                                </h3>
-
-                                <p>
-                                    The experience takes place exclusively
-                                    for your group.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="event-detail">
-
-                            <span>
-                                02
-                            </span>
-
-                            <div>
-
-                                <h3>
-                                    At your home
-                                </h3>
-
-                                <p>
-                                    We come to your home or chosen venue
-                                    and bring what is needed.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="event-detail">
-
-                            <span>
-                                03
-                            </span>
-
-                            <div>
-
-                                <h3>
-                                    Adapted to you
-                                </h3>
-
-                                <p>
-                                    The menu and format can be adapted to
-                                    your occasion and dietary requirements.
-                                </p>
-
-                            </div>
-
+                        <div class="events-intro-image-frame">
+                            <img
+                                src="../assets/images/events/events-intro.jpg"
+                                width="1000"
+                                height="1250"
+                                alt="Guests preparing handmade fresh pasta together around a table"
+                                loading="lazy"
+                            >
                         </div>
 
                     </div>
@@ -365,12 +304,11 @@
              OCCASIONS
         ================================================== -->
 
-        <section class="events-occasions section">
+        <section class="events-occasions section" id="occasions">
 
             <div class="container">
 
-
-                <div class="section-heading">
+                <div class="section-heading centered">
 
                     <p class="eyebrow">
                         OCCASIONS
@@ -380,11 +318,15 @@
                         What are you celebrating?
                     </h2>
 
+                    <p>
+                        Tell us what you are planning and we will shape the menu
+                        and format around your group.
+                    </p>
+
                 </div>
 
 
                 <div class="occasion-grid">
-
 
                     <article class="occasion-card">
 
@@ -393,7 +335,6 @@
                         </div>
 
                         <div>
-
                             <p class="occasion-label">
                                 BIRTHDAYS
                             </p>
@@ -403,11 +344,10 @@
                             </h3>
 
                             <p>
-                                Turn a birthday into an evening everyone
-                                can take part in, with cooking, conversation
-                                and a meal prepared together.
+                                Turn a birthday into an interactive evening
+                                everyone can take part in, with fresh pasta,
+                                good wine, conversation and a meal made together.
                             </p>
-
                         </div>
 
                     </article>
@@ -420,20 +360,19 @@
                         </div>
 
                         <div>
-
                             <p class="occasion-label">
-                                DATE NIGHTS
+                                DATE NIGHTS & ANNIVERSARIES
                             </p>
 
                             <h3>
-                                Something different for two.
+                                Something special for two.
                             </h3>
 
                             <p>
-                                Cook together at home and turn an ordinary
-                                evening into a more memorable Italian dinner.
+                                Cook side by side in your own kitchen and turn
+                                an evening for two into a personal, memorable
+                                Italian dinner made from scratch.
                             </p>
-
                         </div>
 
                     </article>
@@ -446,7 +385,6 @@
                         </div>
 
                         <div>
-
                             <p class="occasion-label">
                                 DINNER PARTIES
                             </p>
@@ -456,10 +394,10 @@
                             </h3>
 
                             <p>
-                                A relaxed way to host friends without having
-                                to prepare the entire dinner yourself.
+                                A relaxed, convivial way to host friends at home
+                                without spending the whole evening alone in the
+                                kitchen preparing dinner.
                             </p>
-
                         </div>
 
                     </article>
@@ -472,21 +410,19 @@
                         </div>
 
                         <div>
-
                             <p class="occasion-label">
                                 TEAM EVENTS
                             </p>
 
                             <h3>
-                                Cook, talk and work together.
+                                Cook, talk and connect.
                             </h3>
 
                             <p>
-                                A hands-on team experience built around
-                                cooking together rather than sitting
-                                through another formal activity.
+                                An informal, hands-on activity for small teams
+                                built around making real food together rather
+                                than sitting at another restaurant table.
                             </p>
-
                         </div>
 
                     </article>
@@ -499,9 +435,8 @@
                         </div>
 
                         <div>
-
                             <p class="occasion-label">
-                                FRIENDS & FAMILY
+                                FAMILY GATHERINGS
                             </p>
 
                             <h3>
@@ -509,11 +444,10 @@
                             </h3>
 
                             <p>
-                                Get everyone involved and spend time together
-                                while learning something you can recreate
-                                at home.
+                                Get everyone around the countertop and spend
+                                quality time together while learning recipes you
+                                can recreate for years to come.
                             </p>
-
                         </div>
 
                     </article>
@@ -526,7 +460,6 @@
                         </div>
 
                         <div>
-
                             <p class="occasion-label">
                                 YOUR OCCASION
                             </p>
@@ -536,21 +469,21 @@
                             </h3>
 
                             <p>
-                                Tell us what you are planning and we can
-                                work out the format together.
+                                From bachelor and bachelorette gatherings to
+                                custom group sizes, tell us what you are planning
+                                and we will work out the details together.
                             </p>
 
-                            <a
-                                href="mailto:gaseltutoring@gmail.com"
-                                class="text-link"
+                            <button
+                                type="button"
+                                class="text-link-btn"
+                                data-event-modal-open
                             >
-                                Get in touch
-                            </a>
-
+                                Send an event request →
+                            </button>
                         </div>
 
                     </article>
-
 
                 </div>
 
@@ -560,23 +493,20 @@
 
 
         <!-- =================================================
-             TEAM EVENTS FEATURE
+             TEAM EVENTS FEATURE BANNER
         ================================================== -->
 
-        <section class="events-team section">
+        <section class="events-team">
 
             <div class="events-team-background"></div>
-
             <div class="events-team-overlay"></div>
-
 
             <div class="container">
 
                 <div class="events-team-content">
 
-
                     <p class="eyebrow">
-                        TEAM EVENTS
+                        CORPORATE & TEAM EXPERIENCES
                     </p>
 
                     <h2>
@@ -584,70 +514,109 @@
                     </h2>
 
                     <p>
-                        Bring your team together around something practical,
-                        social and genuinely collaborative. Everyone gets
-                        involved in preparing the food, while the experience
-                        naturally creates time to talk and connect.
+                        Bring your colleagues together around something practical,
+                        social and genuinely enjoyable. Everyone gets involved
+                        in making the pasta and sauces, while the kitchen setting
+                        naturally creates space to talk and unwind.
                     </p>
 
                     <p>
-                        We can adapt the format, menu and pace depending on
-                        the size of the group and the space available.
+                        We regularly host small teams of up to 10 participants,
+                        and we can discuss custom arrangements for larger groups
+                        depending on your kitchen or venue setup.
                     </p>
-
 
                     <div class="events-team-points">
 
-
                         <div class="events-team-point">
-
-                            <span>
-                                01
-                            </span>
-
-                            <p>
-                                Hands-on cooking for the whole group
-                            </p>
-
+                            <span>01</span>
+                            <p>Hands-on cooking for the whole team</p>
                         </div>
 
-
                         <div class="events-team-point">
-
-                            <span>
-                                02
-                            </span>
-
-                            <p>
-                                Italian menu prepared together
-                            </p>
-
+                            <span>02</span>
+                            <p>Complete Italian menu prepared together</p>
                         </div>
 
-
                         <div class="events-team-point">
-
-                            <span>
-                                03
-                            </span>
-
-                            <p>
-                                Format adapted to your team
-                            </p>
-
+                            <span>03</span>
+                            <p>Adapted to your schedule, space and dietary needs</p>
                         </div>
-
 
                     </div>
-
 
                     <button
                         type="button"
                         class="btn btn-primary"
-                        data-booking-open
+                        data-event-modal-open
                     >
                         Plan a Team Event
                     </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             WHAT WE BRING (DEEP NAVY SECTION)
+        ================================================== -->
+
+        <section class="events-included section">
+
+            <div class="container">
+
+                <div class="events-included-grid">
+
+                    <div class="section-heading">
+
+                        <p class="eyebrow">
+                            WHAT'S INCLUDED
+                        </p>
+
+                        <h2>
+                            We bring the important stuff.
+                        </h2>
+
+                        <p>
+                            You provide a functional kitchen or workspace, basic
+                            pots and pans, and plates and cutlery for your table.
+                            We take care of the rest.
+                        </p>
+
+                    </div>
+
+
+                    <div class="events-included-list">
+
+                        <div class="events-included-item">
+                            <span>01</span>
+                            <p>All fresh ingredients for your agreed Italian menu</p>
+                        </div>
+
+                        <div class="events-included-item">
+                            <span>02</span>
+                            <p>Pasta-making tools and kitchen utensils for the group</p>
+                        </div>
+
+                        <div class="events-included-item">
+                            <span>03</span>
+                            <p>Personal, step-by-step guidance from Edoardo and Gaia</p>
+                        </div>
+
+                        <div class="events-included-item">
+                            <span>04</span>
+                            <p>Menu tailored to your occasion and dietary requirements</p>
+                        </div>
+
+                        <div class="events-included-item">
+                            <span>05</span>
+                            <p>Full preparation before the class and tidy-up of our workspace</p>
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -664,7 +633,6 @@
 
             <div class="container">
 
-
                 <div class="section-heading centered">
 
                     <p class="eyebrow">
@@ -672,12 +640,12 @@
                     </p>
 
                     <h2>
-                        We take care of the cooking setup.
+                        From first idea to dinner around the table.
                     </h2>
 
                     <p>
-                        You tell us about your event, and we take care of
-                        the rest of the planning.
+                        You tell us about your occasion, and we guide you through
+                        every step of the planning.
                     </p>
 
                 </div>
@@ -685,117 +653,50 @@
 
                 <div class="events-process-list">
 
-
                     <article class="events-process-item">
-
-                        <div class="process-number">
-                            01
-                        </div>
-
+                        <div class="process-number">01</div>
                         <div class="process-content">
-
-                            <h3>
-                                Tell us about your event
-                            </h3>
-
+                            <h3>Tell us about your event</h3>
                             <p>
-                                Share the occasion, number of guests, preferred
-                                date and anything else that is important to you.
+                                Send us a quick request with your occasion,
+                                estimated number of guests, preferred date and location.
                             </p>
-
                         </div>
-
                     </article>
 
-
                     <article class="events-process-item">
-
-                        <div class="process-number">
-                            02
-                        </div>
-
+                        <div class="process-number">02</div>
                         <div class="process-content">
-
-                            <h3>
-                                Shape the experience
-                            </h3>
-
+                            <h3>Shape the menu & format</h3>
                             <p>
-                                We discuss the format and propose a menu
-                                suited to your group, occasion and dietary
-                                requirements.
+                                We get in touch personally to confirm availability,
+                                discuss logistics and propose a menu tailored to your group.
                             </p>
-
                         </div>
-
                     </article>
 
-
                     <article class="events-process-item">
-
-                        <div class="process-number">
-                            03
-                        </div>
-
+                        <div class="process-number">03</div>
                         <div class="process-content">
-
-                            <h3>
-                                We prepare everything
-                            </h3>
-
+                            <h3>We prepare everything</h3>
                             <p>
-                                We bring the ingredients and kitchen utensils
-                                needed for the experience.
+                                On the day of your event, we bring all the ingredients
+                                and utensils needed for the cooking experience.
                             </p>
-
                         </div>
-
                     </article>
 
-
                     <article class="events-process-item">
-
-                        <div class="process-number">
-                            04
-                        </div>
-
+                        <div class="process-number">04</div>
                         <div class="process-content">
-
-                            <h3>
-                                Cook together
-                            </h3>
-
+                            <h3>Cook and celebrate together</h3>
                             <p>
-                                We come to your home or chosen venue and guide
-                                everyone through the cooking step by step.
+                                We guide everyone step by step through preparing
+                                the appetizer and fresh pasta, before leaving you to
+                                sit down and enjoy the meal together.
                             </p>
-
                         </div>
-
                     </article>
-
-
-                    <article class="events-process-item">
-
-                        <div class="process-number">
-                            05
-                        </div>
-
-                        <div class="process-content">
-
-                            <h3>
-                                Sit down and enjoy
-                            </h3>
-
-                            <p>
-                                Once everything is ready, sit down together
-                                and enjoy the meal you have just prepared.
-                            </p>
-
-                        </div>
-
-                    </article>
-
 
                 </div>
 
@@ -805,190 +706,95 @@
 
 
         <!-- =================================================
-             WHAT WE BRING
-        ================================================== -->
-
-        <section class="events-included section">
-
-            <div class="container">
-
-
-                <div class="events-included-grid">
-
-
-                    <div class="section-heading">
-
-                        <p class="eyebrow">
-                            INCLUDED
-                        </p>
-
-                        <h2>
-                            We bring the important stuff.
-                        </h2>
-
-                        <p>
-                            You provide the space. We take care of the
-                            ingredients, recipes and cooking equipment.
-                        </p>
-
-                    </div>
-
-
-                    <div class="events-included-list">
-
-
-                        <div class="events-included-item">
-
-                            <span>
-                                01
-                            </span>
-
-                            <p>
-                                All ingredients for the agreed menu
-                            </p>
-
-                        </div>
-
-
-                        <div class="events-included-item">
-
-                            <span>
-                                02
-                            </span>
-
-                            <p>
-                                Kitchen utensils needed for the class
-                            </p>
-
-                        </div>
-
-
-                        <div class="events-included-item">
-
-                            <span>
-                                03
-                            </span>
-
-                            <p>
-                                Recipes and step-by-step guidance
-                            </p>
-
-                        </div>
-
-
-                        <div class="events-included-item">
-
-                            <span>
-                                04
-                            </span>
-
-                            <p>
-                                Menu adapted to dietary requirements
-                            </p>
-
-                        </div>
-
-
-                        <div class="events-included-item">
-
-                            <span>
-                                05
-                            </span>
-
-                            <p>
-                                Preparation and organisation before the event
-                            </p>
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             EVENT REQUEST
+             EVENT DETAILS & PRICING OVERVIEW
         ================================================== -->
 
         <section class="events-request section">
 
             <div class="container">
 
+                <div class="events-request-layout">
 
-                <div class="events-request-inner">
+                    <div class="events-request-intro">
 
-                    <p class="eyebrow">
-                        PLAN YOUR EVENT
-                    </p>
+                        <p class="eyebrow">
+                            PLAN YOUR EVENT
+                        </p>
 
-                    <h2>
-                        Tell us what you have in mind.
-                    </h2>
+                        <h2>
+                            Tell us what you have in mind.
+                        </h2>
 
-                    <p>
-                        Every event is a little different. Send us the
-                        basics and we will get back to you to discuss
-                        the format and availability.
-                    </p>
+                        <p>
+                            Every private event is a little different. Share a few
+                            details about your group and we will get back to you
+                            personally to discuss the format, menu and availability.
+                        </p>
 
+                        <div class="events-request-details">
 
-                    <div class="events-request-details">
+                            <div class="request-detail">
+                                <span>Standard Group</span>
+                                <strong>2–8 People</strong>
+                            </div>
 
+                            <div class="request-detail">
+                                <span>Team & Larger Groups</span>
+                                <strong>Up to 10+ (On Request)</strong>
+                            </div>
 
-                        <div class="request-detail">
+                            <div class="request-detail">
+                                <span>Duration</span>
+                                <strong>2.5–3 Hours</strong>
+                            </div>
 
-                            <span>
-                                Group size
-                            </span>
-
-                            <strong>
-                                2–8 people
-                            </strong>
-
-                        </div>
-
-
-                        <div class="request-detail">
-
-                            <span>
-                                Location
-                            </span>
-
-                            <strong>
-                                Your home
-                            </strong>
+                            <div class="request-detail">
+                                <span>Location</span>
+                                <strong>Your Home or Venue</strong>
+                            </div>
 
                         </div>
-
-
-                        <div class="request-detail">
-
-                            <span>
-                                Format
-                            </span>
-
-                            <strong>
-                                Private
-                            </strong>
-
-                        </div>
-
 
                     </div>
 
 
-                    <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-booking-open
-                    >
-                        Plan Your Event
-                    </button>
+                    <div class="events-request-card">
+
+                        <div class="events-price-grid">
+
+                            <div>
+                                <span>2 people</span>
+                                <strong>
+                                    €79
+                                    <small>/ person</small>
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>3–8 people</span>
+                                <strong>
+                                    €65
+                                    <small>/ person</small>
+                                </strong>
+                            </div>
+
+                        </div>
+
+                        <p class="events-card-note">
+                            Planning for a corporate team or a group larger than
+                            8 guests? Contact us and we will prepare a custom
+                            arrangement based on your group size and kitchen space.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="btn btn-primary btn-full"
+                            data-event-modal-open
+                        >
+                            Request Your Event
+                        </button>
+
+                    </div>
 
                 </div>
 
@@ -1016,14 +822,14 @@
                     </h2>
 
                     <p>
-                        Private Italian cooking experiences,
-                        brought directly to your home.
+                        Private Italian cooking experiences, brought directly
+                        to your home in Luxembourg.
                     </p>
 
                     <button
                         type="button"
                         class="btn btn-primary"
-                        data-booking-open
+                        data-event-modal-open
                     >
                         Plan Your Event
                     </button>
@@ -1033,7 +839,6 @@
             </div>
 
         </section>
-
 
     </main>
 
@@ -1046,7 +851,6 @@
 
         <div class="container footer-grid">
 
-
             <div class="footer-brand">
 
                 <a
@@ -1054,18 +858,16 @@
                     class="site-logo"
                     aria-label="GASEL Cooking home"
                 >
-
                     <img
                         src="../assets/images/logo/gasel-logo.png"
                         width="1500"
                         height="400"
                         alt="GASEL Cooking"
                     >
-
                 </a>
 
                 <p>
-                    Authentic Italian cooking, made together.
+                    Authentic Italian cooking experiences in the comfort of your own home.
                 </p>
 
             </div>
@@ -1143,10 +945,263 @@
 
 
     <!-- =====================================================
-         JAVASCRIPT
+         CUSTOM FLOATING EVENT BUTTON
+    ====================================================== -->
+
+    <button
+        type="button"
+        class="floating-book-btn"
+        data-event-modal-open
+    >
+        Plan your event
+    </button>
+
+
+    <!-- =====================================================
+         FORMSPREE EVENT INQUIRY POPUP MODAL
+    ====================================================== -->
+
+    <div
+        class="event-modal-overlay"
+        id="event-modal"
+        aria-hidden="true"
+    >
+        <div
+            class="event-modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="event-modal-title"
+        >
+
+            <button
+                type="button"
+                class="event-modal-close"
+                data-event-modal-close
+                aria-label="Close form"
+            >
+                &times;
+            </button>
+
+            <div class="event-modal-header">
+                <p class="eyebrow">PRIVATE EVENTS & TEAMS</p>
+                <h2 id="event-modal-title">Tell us about your event.</h2>
+                <p>
+                    Share a few details below and we will get back to you
+                    personally by email to discuss the menu, format and availability.
+                </p>
+            </div>
+
+            <!-- Replace YOUR_FORMSPREE_ID with your actual Formspree form ID -->
+            <form
+                id="event-inquiry-form"
+                class="event-form"
+                action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+                method="POST"
+            >
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Private Event Inquiry — GASEL Cooking"
+                >
+
+                <div class="event-form-grid">
+
+                    <div class="form-group">
+                        <label for="event-name">Full name *</label>
+                        <input
+                            type="text"
+                            id="event-name"
+                            name="name"
+                            required
+                            placeholder="Your name"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-email">Email address *</label>
+                        <input
+                            type="email"
+                            id="event-email"
+                            name="email"
+                            required
+                            placeholder="you@example.com"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-phone">Phone number *</label>
+                        <input
+                            type="tel"
+                            id="event-phone"
+                            name="phone"
+                            required
+                            placeholder="+352 ..."
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-occasion">Occasion *</label>
+                        <select id="event-occasion" name="occasion" required>
+                            <option value="" disabled selected>Select an occasion</option>
+                            <option value="Birthday">Birthday</option>
+                            <option value="Dinner Party with Friends">Dinner Party with Friends</option>
+                            <option value="Date Night / Anniversary">Date Night / Anniversary</option>
+                            <option value="Corporate / Team Event">Corporate / Team Event</option>
+                            <option value="Family Gathering">Family Gathering</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-guests">Estimated number of guests *</label>
+                        <input
+                            type="number"
+                            id="event-guests"
+                            name="guests"
+                            min="2"
+                            max="50"
+                            required
+                            placeholder="e.g. 6"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-date">Preferred date (or timeframe)</label>
+                        <input
+                            type="text"
+                            id="event-date"
+                            name="preferred_date"
+                            placeholder="e.g. Saturday 14 Nov, or flexible"
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="event-location">Town / Location in Luxembourg *</label>
+                    <input
+                        type="text"
+                        id="event-location"
+                        name="location"
+                        required
+                        placeholder="e.g. Luxembourg City, Strassen, Esch..."
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="event-message">Dietary requirements & event details</label>
+                    <textarea
+                        id="event-message"
+                        name="message"
+                        rows="4"
+                        placeholder="Tell us about your kitchen or venue setup, any allergies or dietary preferences, or anything else you have in mind."
+                    ></textarea>
+                </div>
+
+                <div
+                    id="event-form-status"
+                    class="event-form-status"
+                    aria-live="polite"
+                ></div>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary btn-full"
+                    id="event-form-submit"
+                >
+                    Send Event Request
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT (MAIN + FORMSPREE MODAL)
     ====================================================== -->
 
     <script src="../assets/js/main.js"></script>
+
+    <script>
+      (function () {
+        const modal = document.getElementById("event-modal");
+        const openButtons = document.querySelectorAll("[data-event-modal-open]");
+        const closeButtons = document.querySelectorAll("[data-event-modal-close]");
+        const form = document.getElementById("event-inquiry-form");
+        const statusEl = document.getElementById("event-form-status");
+        const submitBtn = document.getElementById("event-form-submit");
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+
+        openButtons.forEach(function (btn) {
+          btn.addEventListener("click", openModal);
+        });
+
+        closeButtons.forEach(function (btn) {
+          btn.addEventListener("click", closeModal);
+        });
+
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && modal.classList.contains("is-open")) {
+            closeModal();
+          }
+        });
+
+        if (form) {
+          form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+            statusEl.textContent = "";
+            statusEl.className = "event-form-status";
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Sending...";
+
+            try {
+              const response = await fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: { "Accept": "application/json" }
+              });
+
+              if (response.ok) {
+                form.reset();
+                statusEl.textContent = "Thank you! Your event request has been sent. Edoardo and Gaia will get back to you very soon.";
+                statusEl.classList.add("is-success");
+                submitBtn.textContent = "Request Sent";
+              } else {
+                statusEl.textContent = "Something went wrong sending the form. Please email us directly at gaseltutoring@gmail.com.";
+                statusEl.classList.add("is-error");
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Send Event Request";
+              }
+            } catch (error) {
+              statusEl.textContent = "Network error. Please email us directly at gaseltutoring@gmail.com.";
+              statusEl.classList.add("is-error");
+              submitBtn.disabled = false;
+              submitBtn.textContent = "Send Event Request";
+            }
+          });
+        }
+      })();
+    </script>
 
 </body>
 </html>
