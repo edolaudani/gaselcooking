@@ -2,17 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>About Us | GASEL Cooking</title>
 
     <meta
         name="description"
-        content="Meet Edoardo and Gaia, the couple behind GASEL Cooking. We bring Italian home cooking to kitchens across Luxembourg through relaxed, hands-on experiences."
+        content="Meet Edoardo and Gaia, the couple behind GASEL Cooking. We bring authentic Italian home cooking to kitchens across Luxembourg through relaxed, hands-on experiences."
     >
 
     <link
@@ -21,7 +17,7 @@
         href="../assets/images/logo/gasel-logo.png"
     >
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -60,8 +56,10 @@
             </a>
 
             <!-- Desktop navigation -->
-            <nav class="main-nav" aria-label="Main navigation">
-
+            <nav
+                class="desktop-nav main-nav"
+                aria-label="Main navigation"
+            >
                 <a href="../" class="nav-link">
                     Home
                 </a>
@@ -78,14 +76,13 @@
                     Plan Your Event
                 </a>
 
-                <a href="../gift/" class="nav-link">
+                <a href="../gift-vouchers/" class="nav-link">
                     Gift a Masterclass
                 </a>
 
                 <a href="../faq/" class="nav-link">
                     FAQ
                 </a>
-
             </nav>
 
             <!-- Mobile menu button -->
@@ -104,12 +101,11 @@
         </div>
 
         <!-- Mobile navigation -->
-        <nav
+        <div
             class="mobile-menu"
             id="mobile-menu"
             aria-label="Mobile navigation"
         >
-
             <a href="../" class="mobile-nav-link">
                 Home
             </a>
@@ -118,7 +114,7 @@
                 Our Masterclass
             </a>
 
-            <a href="./" class="mobile-nav-link">
+            <a href="./" class="mobile-nav-link active">
                 About Us
             </a>
 
@@ -126,15 +122,14 @@
                 Plan Your Event
             </a>
 
-            <a href="../gift/" class="mobile-nav-link">
+            <a href="../gift-vouchers/" class="mobile-nav-link">
                 Gift a Masterclass
             </a>
 
             <a href="../faq/" class="mobile-nav-link">
                 FAQ
             </a>
-
-        </nav>
+        </div>
 
     </header>
 
@@ -155,7 +150,7 @@
                 <div class="about-hero-content">
 
                     <p class="eyebrow">
-                        ABOUT GASEL
+                        ABOUT GASEL COOKING
                     </p>
 
                     <h1>
@@ -164,9 +159,28 @@
 
                     <p class="hero-description">
                         Simple food, good ingredients, hands-on cooking and
-                        people around the table. That is what GASEL Cooking
-                        is all about.
+                        people around the table. Meet Edoardo and Gaia, the hosts
+                        bringing Italian home cooking to kitchens across Luxembourg.
                     </p>
+
+                    <div class="hero-actions">
+
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-booking-open
+                        >
+                            Book a Masterclass
+                        </button>
+
+                        <a
+                            href="../masterclass/"
+                            class="btn btn-secondary about-hero-secondary"
+                        >
+                            Explore the Experience
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -176,7 +190,7 @@
 
 
         <!-- =====================================================
-             INTRO / STORY
+             OUR STORY
              ===================================================== -->
 
         <section class="about-story section">
@@ -195,7 +209,7 @@
                             From Italy to Luxembourg.
                         </h2>
 
-                        <p>
+                        <p class="lead">
                             We are Edoardo and Gaia. We created GASEL Cooking
                             to share the kind of Italian cooking we grew up
                             with: simple, hands-on and meant to be enjoyed
@@ -205,25 +219,56 @@
                         <p>
                             Cooking has always been more than following a
                             recipe for us. It is about knowing your
-                            ingredients, understanding a few basic techniques
-                            and having the confidence to make something
-                            yourself.
+                            ingredients, feeling the dough with your hands,
+                            understanding a few essential techniques and having
+                            the confidence to make something delicious yourself.
                         </p>
 
                         <p>
                             When we moved to Luxembourg, we wanted to bring
-                            that feeling with us. Rather than opening a
-                            restaurant or creating a traditional cooking
-                            school, we decided to do something more personal:
-                            come to people's homes and cook together.
+                            that atmosphere with us. Rather than opening a
+                            restaurant or setting up a formal cooking school,
+                            we decided to do something more personal: travel
+                            directly to people's homes, bring the ingredients
+                            and utensils, and cook together in their own kitchen.
                         </p>
+
+                        <div class="about-story-pillars">
+
+                            <div class="story-pillar">
+                                <span>01</span>
+                                <strong>At Your Home</strong>
+                                <p>We travel to your kitchen anywhere in Luxembourg.</p>
+                            </div>
+
+                            <div class="story-pillar">
+                                <span>02</span>
+                                <strong>Made from Scratch</strong>
+                                <p>Fresh pasta, sauces and starters prepared by hand.</p>
+                            </div>
+
+                            <div class="story-pillar">
+                                <span>03</span>
+                                <strong>Everything Provided</strong>
+                                <p>We bring all ingredients and pasta-making tools.</p>
+                            </div>
+
+                        </div>
 
                     </div>
 
 
-                    <div class="about-story-image">
+                    <div class="about-story-media">
 
-                        <div class="about-story-image-inner"></div>
+                        <div class="about-story-image-frame">
+                            <img
+                                src="../assets/images/about/about-story.jpg"
+                                width="1000"
+                                height="1250"
+                                alt="Edoardo and Gaia cooking together in the kitchen"
+                                loading="lazy"
+                            >
+                        </div>
 
                     </div>
 
@@ -235,17 +280,17 @@
 
 
         <!-- =====================================================
-             EDOARDO + GAIA
+             MEET THE HOSTS: EDOARDO + GAIA
              ===================================================== -->
 
-        <section class="about-us section">
+        <section class="about-hosts section">
 
             <div class="container">
 
-                <div class="about-us-heading">
+                <div class="section-heading centered">
 
                     <p class="eyebrow">
-                        EDOARDO & GAIA
+                        MEET YOUR HOSTS
                     </p>
 
                     <h2>
@@ -253,24 +298,33 @@
                     </h2>
 
                     <p>
-                        GASEL started from something very simple:
-                        we love cooking, and we love sharing it with other
-                        people.
+                        GASEL started from something very simple: we love
+                        cooking at home, and we love sharing that table with
+                        other people.
                     </p>
 
                 </div>
 
 
-                <div class="about-us-grid">
+                <div class="about-hosts-grid">
 
-                    <article class="about-person about-person-edo">
+                    <!-- Edoardo -->
+                    <article class="about-person">
 
-                        <div class="about-person-image"></div>
+                        <div class="about-person-image">
+                            <img
+                                src="../assets/images/about/edoardo.jpg"
+                                width="800"
+                                height="1000"
+                                alt="Edoardo preparing handmade fresh pasta"
+                                loading="lazy"
+                            >
+                        </div>
 
                         <div class="about-person-content">
 
                             <p class="person-label">
-                                EDOARDO
+                                EDOARDO · CO-FOUNDER & HOST
                             </p>
 
                             <h3>
@@ -279,9 +333,17 @@
 
                             <p>
                                 Cooking has always been part of everyday life
-                                for Edoardo. From family meals to experimenting
-                                in the kitchen, food has always been a way of
-                                bringing people together.
+                                for Edoardo. From long family meals in Italy to
+                                experimenting with regional pasta shapes and sauces,
+                                food has always been his way of bringing people
+                                together.
+                            </p>
+
+                            <p>
+                                During our masterclasses, Edoardo loves breaking
+                                down traditional pasta techniques into simple,
+                                practical steps so everyone around the table feels
+                                comfortable working the dough by hand.
                             </p>
 
                         </div>
@@ -289,14 +351,23 @@
                     </article>
 
 
-                    <article class="about-person about-person-gaia">
+                    <!-- Gaia -->
+                    <article class="about-person">
 
-                        <div class="about-person-image"></div>
+                        <div class="about-person-image">
+                            <img
+                                src="../assets/images/about/gaia.jpg"
+                                width="800"
+                                height="1000"
+                                alt="Gaia preparing homemade Italian focaccia and dough"
+                                loading="lazy"
+                            >
+                        </div>
 
                         <div class="about-person-content">
 
                             <p class="person-label">
-                                GAIA
+                                GAIA · CO-FOUNDER & HOST
                             </p>
 
                             <h3>
@@ -304,10 +375,17 @@
                             </h3>
 
                             <p>
-                                Gaia brings the same curiosity to the kitchen,
-                                with a particular love for baking, bread and
-                                the small details that make homemade food
-                                special.
+                                Gaia brings the same warmth and curiosity to the
+                                kitchen, with a particular love for baking,
+                                artisanal focaccia, sourdough bread and the small
+                                details that make homemade food feel special.
+                            </p>
+
+                            <p>
+                                She makes sure every class feels welcoming,
+                                unhurried and personal, guiding guests through
+                                flavors, textures and recipes they can genuinely
+                                recreate on their own.
                             </p>
 
                         </div>
@@ -342,86 +420,71 @@
                             We cook with you.
                         </h2>
 
+                        <p>
+                            Our masterclasses are not demonstrations where you
+                            stand back and watch someone else work. You get your
+                            hands floury, ask questions, taste along the way
+                            and learn by doing.
+                        </p>
+
+                        <p>
+                            We adapt the pace and the menu to the people around
+                            the table. Whether it is your first time making
+                            fresh pasta or you already cook every evening,
+                            we make the experience relaxed and rewarding.
+                        </p>
+
                     </div>
 
 
-                    <div class="about-approach-content">
+                    <div class="about-values">
 
-                        <p>
-                            Our masterclasses are not demonstrations where
-                            you watch someone else cook. You get your hands
-                            dirty, ask questions, make mistakes and learn
-                            along the way.
-                        </p>
-
-                        <p>
-                            We adapt the pace and the recipes to the people
-                            around the table. Whether you are completely new
-                            to fresh pasta or already spend a lot of time in
-                            the kitchen, there is always something to learn.
-                        </p>
-
-                        <div class="about-values">
-
-                            <div class="about-value">
-
-                                <span class="about-value-number">
-                                    01
-                                </span>
-
-                                <div>
-                                    <h3>
-                                        Hands-on
-                                    </h3>
-
-                                    <p>
-                                        You make the food yourself, step by
-                                        step.
-                                    </p>
-                                </div>
-
+                        <div class="about-value">
+                            <span class="about-value-number">01</span>
+                            <div>
+                                <h3>Hands-on from start to finish</h3>
+                                <p>
+                                    From mixing the flour and eggs to shaping the
+                                    pasta and finishing the sauce, you make every
+                                    part of the meal yourself.
+                                </p>
                             </div>
+                        </div>
 
-
-                            <div class="about-value">
-
-                                <span class="about-value-number">
-                                    02
-                                </span>
-
-                                <div>
-                                    <h3>
-                                        Personal
-                                    </h3>
-
-                                    <p>
-                                        We adapt the experience to your group,
-                                        tastes and level.
-                                    </p>
-                                </div>
-
+                        <div class="about-value">
+                            <span class="about-value-number">02</span>
+                            <div>
+                                <h3>Tailored to your group</h3>
+                                <p>
+                                    We choose the appetizer and fresh pasta dish
+                                    together after booking, adapting to your
+                                    tastes, dietary needs and occasion.
+                                </p>
                             </div>
+                        </div>
 
-
-                            <div class="about-value">
-
-                                <span class="about-value-number">
-                                    03
-                                </span>
-
-                                <div>
-                                    <h3>
-                                        At home
-                                    </h3>
-
-                                    <p>
-                                        Your kitchen becomes the place where
-                                        the experience happens.
-                                    </p>
-                                </div>
-
+                        <div class="about-value">
+                            <span class="about-value-number">03</span>
+                            <div>
+                                <h3>We bring the ingredients & utensils</h3>
+                                <p>
+                                    We arrive with the ingredients and pasta tools.
+                                    You only provide a functional kitchen with a
+                                    stovetop, oven, basic cookware and plates.
+                                </p>
                             </div>
+                        </div>
 
+                        <div class="about-value">
+                            <span class="about-value-number">04</span>
+                            <div>
+                                <h3>Made for sharing</h3>
+                                <p>
+                                    Once the cooking is complete, we tidy up our
+                                    workspace and leave you to sit down and enjoy
+                                    the meal together at your own pace.
+                                </p>
+                            </div>
                         </div>
 
                     </div>
@@ -451,22 +514,21 @@
                     </p>
 
                     <h2>
-                        The best place to learn
-                        is often your own kitchen.
+                        The best place to learn is your own kitchen.
                     </h2>
 
                     <p>
-                        There is something different about cooking in a
-                        familiar space. You already know where everything is,
-                        you can ask questions without feeling intimidated,
-                        and the techniques you learn are immediately
-                        connected to the kitchen you use every day.
+                        There is something special about cooking in a familiar
+                        space. You already know where everything is, you can
+                        relax with friends or family without feeling rushed,
+                        and the techniques you learn are immediately connected
+                        to the kitchen you actually use every day.
                     </p>
 
                     <p>
-                        So we bring the ingredients, utensils and preparation
-                        to you. All you need is a functional kitchen and a
-                        little curiosity.
+                        When you see how simple it is to roll fresh pasta on
+                        your own countertop, it becomes a skill you keep
+                        long after the evening ends.
                     </p>
 
                 </div>
@@ -477,7 +539,7 @@
 
 
         <!-- =====================================================
-             WHAT WE BELIEVE
+             WHAT WE BELIEVE (QUOTE)
              ===================================================== -->
 
         <section class="about-believe section">
@@ -491,15 +553,11 @@
                     </p>
 
                     <h2>
-                        Italian cooking does not need
-                        to be complicated.
-                    </h2>
-
-                    <p class="about-believe-text">
+                        “Italian cooking does not need to be complicated.
                         Good ingredients, a few techniques, some patience
                         and people to share the table with. That is usually
-                        enough.
-                    </p>
+                        enough.”
+                    </h2>
 
                     <div class="about-believe-line"></div>
 
@@ -524,25 +582,33 @@
 
                 <div class="about-final-cta-inner">
 
-                    <div>
+                    <p class="eyebrow">
+                        READY TO COOK TOGETHER?
+                    </p>
 
-                        <p class="eyebrow">
-                            COME COOK WITH US
-                        </p>
+                    <h2>
+                        Your kitchen. Our recipes.
+                        A table full of good food.
+                    </h2>
 
-                        <h2>
-                            Your kitchen.
-                            Our recipes.
-                            A table full of good food.
-                        </h2>
+                    <p>
+                        Request a date for a private masterclass at your home,
+                        or explore the full details of our experience first.
+                    </p>
 
-                    </div>
+                    <div class="about-final-cta-actions">
 
-                    <div class="about-final-cta-action">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-booking-open
+                        >
+                            Book a Masterclass
+                        </button>
 
                         <a
                             href="../masterclass/"
-                            class="btn btn-primary"
+                            class="btn btn-secondary about-cta-secondary"
                         >
                             Discover the Masterclass
                         </a>
@@ -564,94 +630,95 @@
 
     <footer class="site-footer">
 
-        <div class="container">
+        <div class="container footer-grid">
 
-            <div class="footer-main">
+            <div class="footer-brand">
 
-                <div class="footer-brand">
-
-                    <a
-                        href="../"
-                        class="footer-logo"
+                <a
+                    href="../"
+                    class="site-logo"
+                    aria-label="GASEL Cooking home"
+                >
+                    <img
+                        src="../assets/images/logo/gasel-logo.png"
+                        width="1500"
+                        height="400"
+                        alt="GASEL Cooking"
                     >
-                        <img
-                            src="../assets/images/logo/gasel-logo.png"
-                            width="1500"
-                            height="400"
-                            alt="GASEL Cooking"
-                        >
-                    </a>
+                </a>
 
-                    <p>
-                        Italian cooking, made together at home.
-                    </p>
+                <p>
+                    Authentic Italian cooking experiences in the comfort of your own home.
+                </p>
 
-                </div>
+            </div>
 
 
-                <div class="footer-links">
+            <div class="footer-links">
 
-                    <div class="footer-column">
+                <h3>
+                    Explore
+                </h3>
 
-                        <h3>
-                            Explore
-                        </h3>
+                <a href="../">
+                    Home
+                </a>
 
-                        <a href="../">
-                            Home
-                        </a>
+                <a href="../masterclass/">
+                    Our Masterclass
+                </a>
 
-                        <a href="../masterclass/">
-                            Our Masterclass
-                        </a>
+                <a href="./">
+                    About Us
+                </a>
 
-                        <a href="./">
-                            About Us
-                        </a>
+                <a href="../events/">
+                    Plan Your Event
+                </a>
 
-                        <a href="../events/">
-                            Plan Your Event
-                        </a>
+                <a href="../gift-vouchers/">
+                    Gift a Masterclass
+                </a>
 
-                    </div>
-
-
-                    <div class="footer-column">
-
-                        <h3>
-                            More
-                        </h3>
-
-                        <a href="../gift/">
-                            Gift a Masterclass
-                        </a>
-
-                        <a href="../faq/">
-                            FAQ
-                        </a>
-
-                        <a href="../privacy/">
-                            Privacy Policy
-                        </a>
-
-                    </div>
-
-                </div>
+                <a href="../faq/">
+                    FAQ
+                </a>
 
             </div>
 
 
-            <div class="footer-bottom">
+            <div class="footer-contact">
+
+                <h3>
+                    Get in touch
+                </h3>
+
+                <a href="tel:+393341660433">
+                    +39 334 166 0433
+                </a>
+
+                <a href="mailto:gaseltutoring@gmail.com">
+                    gaseltutoring@gmail.com
+                </a>
 
                 <p>
-                    © 2026 GASEL Cooking. All rights reserved.
-                </p>
-
-                <p>
-                    Luxembourg
+                    Grand Duchy of Luxembourg
                 </p>
 
             </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 GASEL Cooking. All rights reserved.
+            </p>
+
+            <a href="../terms/">
+                Privacy & Terms
+            </a>
 
         </div>
 
@@ -659,8 +726,69 @@
 
 
     <!-- =========================================================
-         JAVASCRIPT
+         CUSTOM FLOATING BOOKING BUTTON
          ========================================================= -->
+
+    <button
+        type="button"
+        class="floating-book-btn"
+        data-booking-open
+    >
+        Book your class
+    </button>
+
+
+    <!-- =========================================================
+         CAL.COM POPUP MODAL INTEGRATION
+         ========================================================= -->
+
+    <script type="text/javascript">
+      (function (C, A, L) {
+        let p = function (a, ar) { a.q.push(ar); };
+        let d = C.document;
+        C.Cal = C.Cal || function () {
+          let cal = C.Cal;
+          let ar = arguments;
+          if (!cal.loaded) {
+            cal.ns = {};
+            cal.q = cal.q || [];
+            d.head.appendChild(d.createElement("script")).src = A;
+            cal.loaded = true;
+          }
+          if (ar[0] === L) {
+            const api = function () { p(api, arguments); };
+            const namespace = ar[1];
+            api.q = api.q || [];
+            if (typeof namespace === "string") {
+              cal.ns[namespace] = cal.ns[namespace] || api;
+              p(cal.ns[namespace], ar);
+              p(cal, ["initNamespace", namespace]);
+            } else p(cal, ar);
+            return;
+          }
+          p(cal, ar);
+        };
+      })(window, "https://app.cal.com/embed/embed.js", "init");
+
+      Cal("init", "gasel-cooking-masterclass", { origin: "https://app.cal.com" });
+      Cal.config = Cal.config || {};
+      Cal.config.forwardQueryParams = true;
+
+      Cal.ns["gasel-cooking-masterclass"]("ui", {
+        "hideEventTypeDetails": false,
+        "layout": "month_view"
+      });
+
+      document.querySelectorAll("[data-booking-open]").forEach(function (button) {
+        button.addEventListener("click", function (event) {
+          event.preventDefault();
+          Cal.ns["gasel-cooking-masterclass"]("modal", {
+            calLink: "gaselcooking/gasel-cooking-masterclass",
+            config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" }
+          });
+        });
+      });
+    </script>
 
     <script src="../assets/js/main.js"></script>
 
