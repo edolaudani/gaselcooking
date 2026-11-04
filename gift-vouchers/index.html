@@ -38,7 +38,6 @@
 
 <body>
 
-
     <!-- =========================================================
          HEADER
          ========================================================= -->
@@ -60,11 +59,11 @@
                 >
             </a>
 
-
             <!-- Desktop navigation -->
-
-            <nav class="main-nav" aria-label="Main navigation">
-
+            <nav
+                class="desktop-nav main-nav"
+                aria-label="Main navigation"
+            >
                 <a href="../" class="nav-link">
                     Home
                 </a>
@@ -88,12 +87,9 @@
                 <a href="../faq/" class="nav-link">
                     FAQ
                 </a>
-
             </nav>
 
-
             <!-- Mobile menu button -->
-
             <button
                 class="menu-toggle"
                 type="button"
@@ -108,15 +104,12 @@
 
         </div>
 
-
         <!-- Mobile navigation -->
-
-        <nav
+        <div
             class="mobile-menu"
             id="mobile-menu"
             aria-label="Mobile navigation"
         >
-
             <a href="../" class="mobile-nav-link">
                 Home
             </a>
@@ -133,21 +126,19 @@
                 Plan Your Event
             </a>
 
-            <a href="./" class="mobile-nav-link">
+            <a href="./" class="mobile-nav-link active">
                 Gift a Masterclass
             </a>
 
             <a href="../faq/" class="mobile-nav-link">
                 FAQ
             </a>
-
-        </nav>
+        </div>
 
     </header>
 
 
     <main>
-
 
         <!-- =====================================================
              HERO
@@ -172,7 +163,8 @@
 
                     <p class="hero-description">
                         A private Italian cooking experience, brought directly
-                        to their home. A gift to cook, learn and enjoy together.
+                        to their home in Luxembourg. A thoughtful gift to cook,
+                        learn and enjoy a homemade meal together.
                     </p>
 
                     <div class="hero-actions">
@@ -183,6 +175,14 @@
                         >
                             Choose a Gift Voucher
                         </a>
+
+                        <button
+                            type="button"
+                            class="btn btn-secondary gift-hero-secondary"
+                            data-gift-modal-open
+                        >
+                            Request a Voucher Now
+                        </button>
 
                     </div>
 
@@ -210,8 +210,7 @@
                         </p>
 
                         <h2>
-                            Give them something
-                            they can actually enjoy together.
+                            Give them something they can actually enjoy together.
                         </h2>
 
                     </div>
@@ -219,22 +218,23 @@
 
                     <div class="gift-intro-text">
 
-                        <p>
-                            A GASEL gift voucher is an invitation to spend
-                            an evening cooking together in the comfort of
-                            your own home.
+                        <p class="lead">
+                            A GASEL gift voucher is an invitation to spend an
+                            unhurried evening making fresh pasta from scratch
+                            in the comfort of home.
                         </p>
 
                         <p>
-                            We bring the ingredients, utensils and everything
-                            needed for the experience. The recipient simply
-                            chooses a date, gets the kitchen ready and cooks
-                            alongside us.
+                            We bring the fresh ingredients, pasta-making utensils
+                            and step-by-step guidance. The recipient simply
+                            chooses a date that suits them, invites their guests
+                            into the kitchen and cooks alongside us.
                         </p>
 
                         <p>
-                            It is a gift that becomes an experience, a meal
-                            and a memory all at once.
+                            It is a personal gift that becomes a hands-on
+                            activity, a delicious Italian dinner and a lasting
+                            skill all at once.
                         </p>
 
                     </div>
@@ -247,7 +247,7 @@
 
 
         <!-- =====================================================
-             EXPERIENCE
+             EXPERIENCE (BACKGROUND IMAGE BANNER)
              ===================================================== -->
 
         <section class="gift-experience">
@@ -264,76 +264,50 @@
                     </p>
 
                     <h2>
-                        From flour to fresh pasta,
-                        cooked together at home.
+                        From flour to fresh pasta, cooked together at home.
                     </h2>
 
                     <p>
                         The experience is hands-on from beginning to end.
-                        We guide the group through the preparation of fresh
-                        pasta, sauces and an Italian menu adapted to their
-                        preferences and level.
+                        We guide the group through preparing an Italian
+                        appetizer, fresh handmade pasta and sauce tailored
+                        to their tastes and dietary preferences.
                     </p>
 
                     <div class="gift-experience-points">
 
                         <div class="gift-experience-point">
-
-                            <span class="point-number">
-                                01
-                            </span>
-
+                            <span class="point-number">01</span>
                             <div>
-                                <h3>
-                                    We come to them
-                                </h3>
-
+                                <h3>We come to their kitchen</h3>
                                 <p>
-                                    The masterclass takes place in their own
-                                    kitchen.
+                                    The masterclass takes place privately at
+                                    the recipient's own home in Luxembourg.
                                 </p>
                             </div>
-
                         </div>
 
-
                         <div class="gift-experience-point">
-
-                            <span class="point-number">
-                                02
-                            </span>
-
+                            <span class="point-number">02</span>
                             <div>
-                                <h3>
-                                    They cook too
-                                </h3>
-
+                                <h3>Hands-on from start to finish</h3>
                                 <p>
-                                    This is a hands-on experience, not a
-                                    demonstration.
+                                    Everyone rolls up their sleeves and makes
+                                    the pasta by hand, step by step.
                                 </p>
                             </div>
-
                         </div>
 
-
                         <div class="gift-experience-point">
-
-                            <span class="point-number">
-                                03
-                            </span>
-
+                            <span class="point-number">03</span>
                             <div>
-                                <h3>
-                                    Everyone sits down together
-                                </h3>
-
+                                <h3>Everyone sits down together</h3>
                                 <p>
-                                    Once the cooking is finished, it is time
-                                    to enjoy what they made.
+                                    Once the cooking is finished, we tidy our
+                                    workspace so they can sit down and enjoy
+                                    the meal together.
                                 </p>
                             </div>
-
                         </div>
 
                     </div>
@@ -346,105 +320,217 @@
 
 
         <!-- =====================================================
-             WHAT IS INCLUDED
+             GIFT OPTIONS (PRICING CARDS)
+             ===================================================== -->
+
+        <section
+            class="gift-options section"
+            id="gift-options"
+        >
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <p class="eyebrow">
+                        CHOOSE YOUR GIFT
+                    </p>
+
+                    <h2>
+                        A voucher for the people you want to surprise.
+                    </h2>
+
+                    <p>
+                        Select a voucher below and we will prepare a personalised,
+                        printable gift voucher for you to present.
+                    </p>
+
+                </div>
+
+
+                <div class="gift-options-grid">
+
+                    <!-- Two people -->
+                    <article class="gift-card">
+
+                        <div class="gift-card-top">
+
+                            <p class="gift-card-label">
+                                VOUCHER FOR TWO
+                            </p>
+
+                            <div class="gift-card-price">
+                                <span class="price-symbol">€</span>
+                                <span class="price-value">130</span>
+                            </div>
+
+                            <p class="gift-card-description">
+                                Ideal for couples, anniversaries, birthdays or
+                                two close friends who love Italian food.
+                            </p>
+
+                        </div>
+
+                        <div class="gift-card-bottom">
+
+                            <ul>
+                                <li>Private in-home Italian masterclass for 2</li>
+                                <li>Appetizer & handmade fresh pasta dish</li>
+                                <li>All ingredients & pasta utensils provided</li>
+                                <li>Menu tailored to tastes & dietary needs</li>
+                                <li>Personalised printable gift voucher</li>
+                            </ul>
+
+                            <button
+                                type="button"
+                                class="btn btn-primary btn-full"
+                                data-gift-modal-open
+                                data-voucher-select="Voucher for Two (€130)"
+                            >
+                                Gift for Two · €130
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Four people -->
+                    <article class="gift-card gift-card-featured">
+
+                        <div class="gift-card-badge">
+                            POPULAR FOR FAMILIES & FRIENDS
+                        </div>
+
+                        <div class="gift-card-top">
+
+                            <p class="gift-card-label">
+                                VOUCHER FOR FOUR
+                            </p>
+
+                            <div class="gift-card-price">
+                                <span class="price-symbol">€</span>
+                                <span class="price-value">260</span>
+                            </div>
+
+                            <p class="gift-card-description">
+                                A convivial cooking evening for four friends,
+                                two couples or a family gathering at home.
+                            </p>
+
+                        </div>
+
+                        <div class="gift-card-bottom">
+
+                            <ul>
+                                <li>Private in-home Italian masterclass for 4</li>
+                                <li>Appetizer & handmade fresh pasta dish</li>
+                                <li>All ingredients & pasta utensils provided</li>
+                                <li>Menu tailored to tastes & dietary needs</li>
+                                <li>Personalised printable gift voucher</li>
+                            </ul>
+
+                            <button
+                                type="button"
+                                class="btn btn-primary btn-full"
+                                data-gift-modal-open
+                                data-voucher-select="Voucher for Four (€260)"
+                            >
+                                Gift for Four · €260
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="gift-options-note">
+                    <p>
+                        Looking for a voucher for 3 guests, or a larger group of
+                        up to 8 people?
+                        <button
+                            type="button"
+                            class="inline-modal-link"
+                            data-gift-modal-open
+                            data-voucher-select="Custom Group Size"
+                        >
+                            Request a custom group voucher →
+                        </button>
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WHAT IS INCLUDED (DEEP NAVY SECTION)
              ===================================================== -->
 
         <section class="gift-included section">
 
             <div class="container">
 
-                <div class="gift-included-heading">
-
-                    <p class="eyebrow">
-                        WHAT'S INCLUDED
-                    </p>
-
-                    <h2>
-                        Everything is taken care of.
-                    </h2>
-
-                </div>
-
-
                 <div class="gift-included-grid">
 
-                    <div class="gift-included-list">
+                    <div class="gift-included-left">
 
-                        <div class="gift-included-item">
-
-                            <span class="included-number">
-                                01
-                            </span>
-
-                            <div>
-                                <h3>
-                                    Private at-home experience
-                                </h3>
-
-                                <p>
-                                    The masterclass takes place in the
-                                    recipient's own home.
-                                </p>
-                            </div>
-
+                        <div class="section-heading">
+                            <p class="eyebrow">
+                                WHAT'S INCLUDED
+                            </p>
+                            <h2>
+                                Everything is taken care of.
+                            </h2>
                         </div>
 
+                        <div class="gift-included-list">
 
-                        <div class="gift-included-item">
-
-                            <span class="included-number">
-                                02
-                            </span>
-
-                            <div>
-                                <h3>
-                                    Fresh ingredients
-                                </h3>
-
-                                <p>
-                                    We bring everything needed for the
-                                    selected menu.
-                                </p>
+                            <div class="gift-included-item">
+                                <span class="included-number">01</span>
+                                <div>
+                                    <h3>Private at-home experience</h3>
+                                    <p>
+                                        We travel directly to the recipient's
+                                        kitchen anywhere in Luxembourg.
+                                    </p>
+                                </div>
                             </div>
 
-                        </div>
-
-
-                        <div class="gift-included-item">
-
-                            <span class="included-number">
-                                03
-                            </span>
-
-                            <div>
-                                <h3>
-                                    Kitchen utensils
-                                </h3>
-
-                                <p>
-                                    We bring the equipment needed for the
-                                    preparation.
-                                </p>
+                            <div class="gift-included-item">
+                                <span class="included-number">02</span>
+                                <div>
+                                    <h3>Fresh ingredients supplied</h3>
+                                    <p>
+                                        We bring all the flour, eggs, produce
+                                        and ingredients for the chosen menu.
+                                    </p>
+                                </div>
                             </div>
 
-                        </div>
+                            <div class="gift-included-item">
+                                <span class="included-number">03</span>
+                                <div>
+                                    <h3>Pasta tools & utensils</h3>
+                                    <p>
+                                        We bring the pasta-making boards,
+                                        rolling pins and specialty tools needed.
+                                    </p>
+                                </div>
+                            </div>
 
-
-                        <div class="gift-included-item">
-
-                            <span class="included-number">
-                                04
-                            </span>
-
-                            <div>
-                                <h3>
-                                    Step-by-step guidance
-                                </h3>
-
-                                <p>
-                                    Edoardo and Gaia cook alongside the group
-                                    and guide every step.
-                                </p>
+                            <div class="gift-included-item">
+                                <span class="included-number">04</span>
+                                <div>
+                                    <h3>Personal guidance from Edoardo & Gaia</h3>
+                                    <p>
+                                        We cook alongside the group and adapt
+                                        every step to their pace and level.
+                                    </p>
+                                </div>
                             </div>
 
                         </div>
@@ -465,15 +551,16 @@
                             </h3>
 
                             <p>
-                                They learn how to make it themselves.
+                                They learn how to make fresh pasta with their
+                                own hands, in their own kitchen, so they can
+                                recreate the recipes whenever they like.
                             </p>
 
                             <a
                                 href="../masterclass/"
                                 class="text-link"
                             >
-                                See the Masterclass
-                                <span>→</span>
+                                See how the Masterclass works →
                             </a>
 
                         </div>
@@ -488,174 +575,107 @@
 
 
         <!-- =====================================================
-             GIFT OPTIONS
+             FOR EVERY OCCASION (EDITORIAL LEDGER — NO BOXY GRID)
              ===================================================== -->
 
-        <section
-            class="gift-options section"
-            id="gift-options"
-        >
+        <section class="gift-occasions section">
 
             <div class="container">
 
-                <div class="gift-options-heading">
+                <div class="gift-occasions-layout">
 
-                    <p class="eyebrow">
-                        CHOOSE YOUR GIFT
-                    </p>
+                    <div class="gift-occasions-intro">
 
-                    <h2>
-                        A voucher for the people
-                        you want to surprise.
-                    </h2>
+                        <p class="eyebrow">
+                            FOR EVERY OCCASION
+                        </p>
 
-                    <p>
-                        Choose the number of people and we will prepare a
-                        printable gift voucher for you.
-                    </p>
+                        <h2>
+                            Some gifts are better when you experience them together.
+                        </h2>
 
-                </div>
+                        <p>
+                            Instead of another object on a shelf, give an
+                            evening around the kitchen table. Each voucher
+                            includes space for a personal message tailored to
+                            what you are celebrating.
+                        </p>
+
+                    </div>
 
 
-                <div class="gift-options-grid">
+                    <div class="gift-occasions-ledger">
 
-
-                    <!-- Two people -->
-
-                    <article class="gift-card">
-
-                        <div class="gift-card-top">
-
-                            <p class="gift-card-label">
-                                FOR TWO
-                            </p>
-
-                            <div class="gift-card-price">
-                                <span class="price-symbol">€</span>
-                                <span class="price-value">130</span>
+                        <div class="occasion-row">
+                            <span class="occasion-row-num">01</span>
+                            <div class="occasion-row-body">
+                                <h3>Birthdays</h3>
+                                <p>
+                                    A memorable evening where the birthday guest
+                                    gets to cook, laugh and sit down to a homemade
+                                    Italian feast.
+                                </p>
                             </div>
-
-                            <p class="gift-card-description">
-                                A private Italian cooking experience for two,
-                                in their own home.
-                            </p>
-
                         </div>
 
-
-                        <div class="gift-card-bottom">
-
-                            <ul>
-
-                                <li>
-                                    Private masterclass
-                                </li>
-
-                                <li>
-                                    At-home experience
-                                </li>
-
-                                <li>
-                                    Ingredients included
-                                </li>
-
-                                <li>
-                                    Kitchen utensils included
-                                </li>
-
-                                <li>
-                                    Menu adapted to preferences
-                                </li>
-
-                            </ul>
-
-
-                            <a
-                                href="#gift-request"
-                                class="btn btn-primary"
-                            >
-                                Gift for Two
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Four people -->
-
-                    <article class="gift-card gift-card-featured">
-
-                        <div class="gift-card-top">
-
-                            <p class="gift-card-label">
-                                FOR FOUR
-                            </p>
-
-                            <div class="gift-card-price">
-                                <span class="price-symbol">€</span>
-                                <span class="price-value">260</span>
+                        <div class="occasion-row">
+                            <span class="occasion-row-num">02</span>
+                            <div class="occasion-row-body">
+                                <h3>Anniversaries & Couples</h3>
+                                <p>
+                                    An intimate date night for two at home,
+                                    learning to shape fresh pasta side by side.
+                                </p>
                             </div>
-
-                            <p class="gift-card-description">
-                                A shared cooking experience for four friends
-                                or family members.
-                            </p>
-
                         </div>
 
-
-                        <div class="gift-card-bottom">
-
-                            <ul>
-
-                                <li>
-                                    Private masterclass
-                                </li>
-
-                                <li>
-                                    At-home experience
-                                </li>
-
-                                <li>
-                                    Ingredients included
-                                </li>
-
-                                <li>
-                                    Kitchen utensils included
-                                </li>
-
-                                <li>
-                                    Menu adapted to preferences
-                                </li>
-
-                            </ul>
-
-
-                            <a
-                                href="#gift-request"
-                                class="btn btn-primary"
-                            >
-                                Gift for Four
-                            </a>
-
+                        <div class="occasion-row">
+                            <span class="occasion-row-num">03</span>
+                            <div class="occasion-row-body">
+                                <h3>Weddings & Housewarmings</h3>
+                                <p>
+                                    A warm way to christen a new kitchen or
+                                    give newlyweds an experience they can share.
+                                </p>
+                            </div>
                         </div>
 
-                    </article>
+                        <div class="occasion-row">
+                            <span class="occasion-row-num">04</span>
+                            <div class="occasion-row-body">
+                                <h3>Christmas & Holidays</h3>
+                                <p>
+                                    A printable voucher ready to place under the
+                                    tree, giving everyone an evening to look
+                                    forward to in the new year.
+                                </p>
+                            </div>
+                        </div>
 
+                        <div class="occasion-row">
+                            <span class="occasion-row-num">05</span>
+                            <div class="occasion-row-body">
+                                <h3>Friends & Family</h3>
+                                <p>
+                                    Bring four people together around the same
+                                    countertop for a relaxed evening of cooking
+                                    and conversation.
+                                </p>
+                            </div>
+                        </div>
 
-                </div>
+                        <div class="occasion-row">
+                            <span class="occasion-row-num">06</span>
+                            <div class="occasion-row-body">
+                                <h3>Thank You & Milestones</h3>
+                                <p>
+                                    A thoughtful gesture for graduations,
+                                    retirements, farewells or simply saying thank you.
+                                </p>
+                            </div>
+                        </div>
 
-
-                <div class="gift-options-note">
-
-                    <p>
-                        Looking for a voucher for a different group size?
-                        <a href="../events/">
-                            Get in touch with us
-                        </a>
-                        and we will tailor the experience to your group.
-                    </p>
+                    </div>
 
                 </div>
 
@@ -672,7 +692,7 @@
 
             <div class="container">
 
-                <div class="gift-how-heading">
+                <div class="section-heading centered">
 
                     <p class="eyebrow">
                         HOW IT WORKS
@@ -682,131 +702,50 @@
                         Three simple steps.
                     </h2>
 
+                    <p>
+                        Ordering and redeeming a GASEL gift voucher is
+                        straightforward for both you and the recipient.
+                    </p>
+
                 </div>
 
 
                 <div class="gift-steps">
 
+                    <div class="gift-step">
+                        <div class="gift-step-number">01</div>
+                        <div class="gift-step-content">
+                            <h3>Request your voucher</h3>
+                            <p>
+                                Click any voucher button on this page, choose
+                                the group size and let us know the recipient's
+                                name and any personal note you would like to include.
+                            </p>
+                        </div>
+                    </div>
 
                     <div class="gift-step">
-
-                        <div class="gift-step-number">
-                            01
-                        </div>
-
+                        <div class="gift-step-number">02</div>
                         <div class="gift-step-content">
-
-                            <h3>
-                                Choose your voucher
-                            </h3>
-
+                            <h3>Receive your printable voucher</h3>
                             <p>
-                                Select the number of people and request your
-                                gift voucher.
+                                We get in touch personally to arrange payment
+                                and send your personalised, printable gift
+                                voucher ready to print or forward.
                             </p>
-
                         </div>
-
                     </div>
-
 
                     <div class="gift-step">
-
-                        <div class="gift-step-number">
-                            02
-                        </div>
-
+                        <div class="gift-step-number">03</div>
                         <div class="gift-step-content">
-
-                            <h3>
-                                Give it to them
-                            </h3>
-
+                            <h3>They choose the date & menu</h3>
                             <p>
-                                We prepare a printable voucher that you can
-                                give directly to the recipient.
+                                Whenever they are ready, the recipient contacts
+                                us to pick a convenient date and choose their
+                                preferred appetizer and pasta dish.
                             </p>
-
                         </div>
-
-                    </div>
-
-
-                    <div class="gift-step">
-
-                        <div class="gift-step-number">
-                            03
-                        </div>
-
-                        <div class="gift-step-content">
-
-                            <h3>
-                                They choose the date
-                            </h3>
-
-                            <p>
-                                The recipient gets in touch with us to arrange
-                                the masterclass at a date that works for them.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             PERFECT FOR
-             ===================================================== -->
-
-        <section class="gift-occasions section">
-
-            <div class="container">
-
-                <div class="gift-occasions-heading">
-
-                    <p class="eyebrow">
-                        FOR EVERY OCCASION
-                    </p>
-
-                    <h2>
-                        Some gifts are better
-                        when you experience them together.
-                    </h2>
-
-                </div>
-
-
-                <div class="gift-occasion-grid">
-
-                    <div class="gift-occasion">
-                        <span>Birthdays</span>
-                    </div>
-
-                    <div class="gift-occasion">
-                        <span>Anniversaries</span>
-                    </div>
-
-                    <div class="gift-occasion">
-                        <span>Couples</span>
-                    </div>
-
-                    <div class="gift-occasion">
-                        <span>Christmas</span>
-                    </div>
-
-                    <div class="gift-occasion">
-                        <span>Friends & Family</span>
-                    </div>
-
-                    <div class="gift-occasion">
-                        <span>Special Occasions</span>
                     </div>
 
                 </div>
@@ -817,7 +756,7 @@
 
 
         <!-- =====================================================
-             REQUEST
+             REQUEST BANNER
              ===================================================== -->
 
         <section
@@ -836,54 +775,30 @@
                         </p>
 
                         <h2>
-                            Give them a reason
-                            to get together.
+                            Give them a reason to get together.
                         </h2>
 
                         <p>
-                            Tell us who the voucher is for and how many people
-                            you would like to include. We will take care of
-                            the rest.
+                            Tell us who the voucher is for and which option you
+                            would like to gift. We will get back to you personally
+                            to prepare your voucher.
                         </p>
 
                         <div class="gift-request-details">
 
                             <div class="request-detail">
-
-                                <span class="request-detail-label">
-                                    Location
-                                </span>
-
-                                <span class="request-detail-value">
-                                    Luxembourg
-                                </span>
-
+                                <span class="request-detail-label">Location</span>
+                                <strong class="request-detail-value">Their Home in Luxembourg</strong>
                             </div>
 
-
                             <div class="request-detail">
-
-                                <span class="request-detail-label">
-                                    Format
-                                </span>
-
-                                <span class="request-detail-value">
-                                    Private & at home
-                                </span>
-
+                                <span class="request-detail-label">Format</span>
+                                <strong class="request-detail-value">Private Masterclass</strong>
                             </div>
 
-
                             <div class="request-detail">
-
-                                <span class="request-detail-label">
-                                    Voucher
-                                </span>
-
-                                <span class="request-detail-value">
-                                    Printable
-                                </span>
-
+                                <span class="request-detail-label">Voucher Format</span>
+                                <strong class="request-detail-value">Personalised & Printable</strong>
                             </div>
 
                         </div>
@@ -893,15 +808,16 @@
 
                     <div class="gift-request-action">
 
-                        <a
-                            href="mailto:gaseltutoring@gmail.com?subject=Gift%20Voucher%20Request"
-                            class="btn btn-primary btn-large"
+                        <button
+                            type="button"
+                            class="btn btn-primary btn-full"
+                            data-gift-modal-open
                         >
                             Request a Gift Voucher
-                        </a>
+                        </button>
 
                         <p>
-                            We will get back to you with the next steps.
+                            Edoardo and Gaia will reply personally with the next steps.
                         </p>
 
                     </div>
@@ -928,16 +844,27 @@
                     </p>
 
                     <h2>
-                        Good food is even better
-                        when you make it together.
+                        Good food is even better when you make it together.
                     </h2>
 
-                    <a
-                        href="../masterclass/"
-                        class="btn btn-secondary"
-                    >
-                        Discover the Masterclass
-                    </a>
+                    <div class="gift-final-cta-actions">
+
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-gift-modal-open
+                        >
+                            Order a Gift Voucher
+                        </button>
+
+                        <a
+                            href="../masterclass/"
+                            class="btn btn-outline"
+                        >
+                            Discover the Masterclass
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -954,94 +881,95 @@
 
     <footer class="site-footer">
 
-        <div class="container">
+        <div class="container footer-grid">
 
-            <div class="footer-main">
+            <div class="footer-brand">
 
-                <div class="footer-brand">
-
-                    <a
-                        href="../"
-                        class="footer-logo"
+                <a
+                    href="../"
+                    class="site-logo"
+                    aria-label="GASEL Cooking home"
+                >
+                    <img
+                        src="../assets/images/logo/gasel-logo.png"
+                        width="1500"
+                        height="400"
+                        alt="GASEL Cooking"
                     >
-                        <img
-                            src="../assets/images/logo/gasel-logo.png"
-                            width="1500"
-                            height="400"
-                            alt="GASEL Cooking"
-                        >
-                    </a>
+                </a>
 
-                    <p>
-                        Italian cooking, made together at home.
-                    </p>
+                <p>
+                    Authentic Italian cooking experiences in the comfort of your own home.
+                </p>
 
-                </div>
+            </div>
 
 
-                <div class="footer-links">
+            <div class="footer-links">
 
-                    <div class="footer-column">
+                <h3>
+                    Explore
+                </h3>
 
-                        <h3>
-                            Explore
-                        </h3>
+                <a href="../">
+                    Home
+                </a>
 
-                        <a href="../">
-                            Home
-                        </a>
+                <a href="../masterclass/">
+                    Our Masterclass
+                </a>
 
-                        <a href="../masterclass/">
-                            Our Masterclass
-                        </a>
+                <a href="../about/">
+                    About Us
+                </a>
 
-                        <a href="../about/">
-                            About Us
-                        </a>
+                <a href="../events/">
+                    Plan Your Event
+                </a>
 
-                        <a href="../events/">
-                            Plan Your Event
-                        </a>
+                <a href="./">
+                    Gift a Masterclass
+                </a>
 
-                    </div>
-
-
-                    <div class="footer-column">
-
-                        <h3>
-                            More
-                        </h3>
-
-                        <a href="./">
-                            Gift a Masterclass
-                        </a>
-
-                        <a href="../faq/">
-                            FAQ
-                        </a>
-
-                        <a href="../privacy/">
-                            Privacy Policy
-                        </a>
-
-                    </div>
-
-                </div>
+                <a href="../faq/">
+                    FAQ
+                </a>
 
             </div>
 
 
-            <div class="footer-bottom">
+            <div class="footer-contact">
+
+                <h3>
+                    Get in touch
+                </h3>
+
+                <a href="tel:+393341660433">
+                    +39 334 166 0433
+                </a>
+
+                <a href="mailto:gaseltutoring@gmail.com">
+                    gaseltutoring@gmail.com
+                </a>
 
                 <p>
-                    © 2026 GASEL Cooking. All rights reserved.
-                </p>
-
-                <p>
-                    Luxembourg
+                    Grand Duchy of Luxembourg
                 </p>
 
             </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 GASEL Cooking. All rights reserved.
+            </p>
+
+            <a href="../terms/">
+                Privacy & Terms
+            </a>
 
         </div>
 
@@ -1049,10 +977,261 @@
 
 
     <!-- =========================================================
+         CUSTOM FLOATING VOUCHER BUTTON
+         ========================================================= -->
+
+    <button
+        type="button"
+        class="floating-book-btn"
+        data-gift-modal-open
+    >
+        Gift a voucher
+    </button>
+
+
+    <!-- =========================================================
+         FORMSPREE GIFT VOUCHER POPUP MODAL
+         ========================================================= -->
+
+    <div
+        class="gift-modal-overlay"
+        id="gift-modal"
+        aria-hidden="true"
+    >
+        <div
+            class="gift-modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="gift-modal-title"
+        >
+
+            <button
+                type="button"
+                class="gift-modal-close"
+                data-gift-modal-close
+                aria-label="Close form"
+            >
+                &times;
+            </button>
+
+            <div class="gift-modal-header">
+                <p class="eyebrow">GIFT A MASTERCLASS</p>
+                <h2 id="gift-modal-title">Request your gift voucher.</h2>
+                <p>
+                    Select your voucher option below and share the details for
+                    personalisation. We will reply by email with payment details
+                    and your printable voucher.
+                </p>
+            </div>
+
+            <!-- Replace YOUR_FORMSPREE_ID with your Formspree ID (you can use the same ID as Events or a separate one) -->
+            <form
+                id="gift-voucher-form"
+                class="gift-form"
+                action="https://formspree.io/f/xjyypdwb"
+                method="POST"
+            >
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Gift Voucher Request — GASEL Cooking"
+                >
+                <input
+                    type="hidden"
+                    name="form_type"
+                    value="Gift Voucher Request"
+                >
+
+                <div class="gift-form-grid">
+
+                    <div class="form-group">
+                        <label for="gift-voucher-option">Voucher option *</label>
+                        <select id="gift-voucher-option" name="voucher_option" required>
+                            <option value="" disabled selected>Choose a voucher</option>
+                            <option value="Voucher for Two (€130)">Voucher for Two (€130)</option>
+                            <option value="Voucher for Four (€260)">Voucher for Four (€260)</option>
+                            <option value="Custom Group Size">Custom Group Size (3 or 5–8 people)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gift-occasion">Occasion *</label>
+                        <select id="gift-occasion" name="occasion" required>
+                            <option value="" disabled selected>Select an occasion</option>
+                            <option value="Birthday">Birthday</option>
+                            <option value="Anniversary / Couple">Anniversary / Couple</option>
+                            <option value="Christmas / Holidays">Christmas / Holidays</option>
+                            <option value="Wedding / Housewarming">Wedding / Housewarming</option>
+                            <option value="Friends & Family">Friends & Family</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gift-buyer-name">Your full name *</label>
+                        <input
+                            type="text"
+                            id="gift-buyer-name"
+                            name="buyer_name"
+                            required
+                            placeholder="Your name"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gift-buyer-email">Your email address *</label>
+                        <input
+                            type="email"
+                            id="gift-buyer-email"
+                            name="email"
+                            required
+                            placeholder="you@example.com"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gift-buyer-phone">Your phone number *</label>
+                        <input
+                            type="tel"
+                            id="gift-buyer-phone"
+                            name="phone"
+                            required
+                            placeholder="+352 ..."
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gift-recipient-name">Recipient name(s) (for the voucher) *</label>
+                        <input
+                            type="text"
+                            id="gift-recipient-name"
+                            name="recipient_names"
+                            required
+                            placeholder="e.g. Marie & Thomas"
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="gift-message">Personal message or additional notes (optional)</label>
+                    <textarea
+                        id="gift-message"
+                        name="personal_message"
+                        rows="3"
+                        placeholder="If you would like a short personal message printed on the voucher (or if you are requesting a custom group size), write it here."
+                    ></textarea>
+                </div>
+
+                <div
+                    id="gift-form-status"
+                    class="gift-form-status"
+                    aria-live="polite"
+                ></div>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary btn-full"
+                    id="gift-form-submit"
+                >
+                    Send Voucher Request
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+
+    <!-- =========================================================
          JAVASCRIPT
          ========================================================= -->
 
     <script src="../assets/js/main.js"></script>
+
+    <script>
+      (function () {
+        const modal = document.getElementById("gift-modal");
+        const openButtons = document.querySelectorAll("[data-gift-modal-open]");
+        const closeButtons = document.querySelectorAll("[data-gift-modal-close]");
+        const voucherSelect = document.getElementById("gift-voucher-option");
+        const form = document.getElementById("gift-voucher-form");
+        const statusEl = document.getElementById("gift-form-status");
+        const submitBtn = document.getElementById("gift-form-submit");
+
+        function openModal(e) {
+          if (e) e.preventDefault();
+          const preselect = this.getAttribute("data-voucher-select");
+          if (preselect && voucherSelect) {
+            voucherSelect.value = preselect;
+          }
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+
+        openButtons.forEach(function (btn) {
+          btn.addEventListener("click", openModal);
+        });
+
+        closeButtons.forEach(function (btn) {
+          btn.addEventListener("click", closeModal);
+        });
+
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && modal.classList.contains("is-open")) {
+            closeModal();
+          }
+        });
+
+        if (form) {
+          form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+            statusEl.textContent = "";
+            statusEl.className = "gift-form-status";
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Sending...";
+
+            try {
+              const response = await fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: { "Accept": "application/json" }
+              });
+
+              if (response.ok) {
+                form.reset();
+                statusEl.textContent = "Thank you! Your gift voucher request has been received. Edoardo and Gaia will email you shortly.";
+                statusEl.classList.add("is-success");
+                submitBtn.textContent = "Request Sent";
+              } else {
+                statusEl.textContent = "Something went wrong sending the form. Please email us directly at gaseltutoring@gmail.com.";
+                statusEl.classList.add("is-error");
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Send Voucher Request";
+              }
+            } catch (error) {
+              statusEl.textContent = "Network error. Please email us directly at gaseltutoring@gmail.com.";
+              statusEl.classList.add("is-error");
+              submitBtn.disabled = false;
+              submitBtn.textContent = "Send Voucher Request";
+            }
+          });
+        }
+      })();
+    </script>
 
 </body>
 </html>
