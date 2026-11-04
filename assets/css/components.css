@@ -71,6 +71,61 @@
 
 
 /* =========================================================
+   FLOATING BOOKING BUTTON
+   ========================================================= */
+
+.floating-book-btn {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    z-index: 999;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: var(--radius-pill);
+
+    background: var(--blue);
+    color: var(--white);
+
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    white-space: nowrap;
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal),
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.floating-book-btn:hover {
+    background: var(--gold);
+    color: var(--black);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 700px) {
+    .floating-book-btn {
+        right: 18px;
+        bottom: 18px;
+        padding: 12px 22px;
+        font-size: 20px;
+    }
+}
+
+
+/* =========================================================
    HEADER
    ========================================================= */
 
