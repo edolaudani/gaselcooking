@@ -22,7 +22,7 @@
     z-index: 0;
     background-color: var(--blue, #273C60);
     /* Keep your existing hero background image path if different */
-    background-image: url("../images/gift/gift-hero.jpg");
+    background-image: url("../images/gifts/gift-hero.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -212,7 +212,7 @@
     z-index: 0;
     background-color: var(--blue, #273C60);
     /* Keep your existing experience background image path if different */
-    background-image: url("../images/gift/gift-experience.jpg");
+    background-image: url("../images/gifts/gift-experience.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
