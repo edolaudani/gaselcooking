@@ -15,7 +15,6 @@ const mobileMenu = document.querySelector(".mobile-menu");
 if (menuToggle && mobileMenu) {
 
     menuToggle.addEventListener("click", () => {
-
         const isOpen = menuToggle.classList.toggle("is-open");
 
         mobileMenu.classList.toggle("is-open");
@@ -29,7 +28,6 @@ if (menuToggle && mobileMenu) {
             "aria-label",
             isOpen ? "Close menu" : "Open menu"
         );
-
     });
 
 
@@ -38,7 +36,6 @@ if (menuToggle && mobileMenu) {
     const mobileLinks = mobileMenu.querySelectorAll("a");
 
     mobileLinks.forEach(link => {
-
         link.addEventListener("click", () => {
 
             menuToggle.classList.remove("is-open");
@@ -48,19 +45,25 @@ if (menuToggle && mobileMenu) {
             menuToggle.setAttribute("aria-label", "Open menu");
 
         });
-
     });
 
 }
 
 
 /* =========================================================
-   CAL.COM BOOKING POPUP
+   CAL.COM BOOKING INTEGRATION
+   Floating popup + inline calendar
    ========================================================= */
 
 const bookingButtons = document.querySelectorAll("[data-booking-open]");
+const inlineCalendar = document.querySelector(
+    "#my-cal-inline-gasel-cooking-masterclass"
+);
 
-if (bookingButtons.length > 0) {
+
+/* Only load Cal.com on pages that use a booking feature */
+
+if (bookingButtons.length > 0 || inlineCalendar) {
 
     (function (C, A, L) {
 
@@ -76,6 +79,7 @@ if (bookingButtons.length > 0) {
             let ar = arguments;
 
             if (!cal.loaded) {
+
                 cal.ns = {};
                 cal.q = cal.q || [];
 
@@ -117,6 +121,8 @@ if (bookingButtons.length > 0) {
     })(window, "https://app.cal.com/embed/embed.js", "init");
 
 
+    /* Initialise Cal.com */
+
     Cal("init", "gasel-cooking-masterclass", {
         origin: "https://app.cal.com"
     });
@@ -129,6 +135,8 @@ if (bookingButtons.length > 0) {
         layout: "month_view"
     });
 
+
+    /* Floating booking buttons */
 
     bookingButtons.forEach(button => {
 
@@ -147,5 +155,24 @@ if (bookingButtons.length > 0) {
         });
 
     });
+
+
+    /* Inline booking calendar, only on pages containing it */
+
+    if (inlineCalendar) {
+
+        Cal.ns["gasel-cooking-masterclass"]("inline", {
+
+            elementOrSelector: "#my-cal-inline-gasel-cooking-masterclass",
+
+            calLink: "gaselcooking/gasel-cooking-masterclass",
+
+            config: {
+                layout: "month_view"
+            }
+
+        });
+
+    }
 
 }
