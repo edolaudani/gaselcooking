@@ -342,9 +342,20 @@
 
 .section-action {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 
     margin-top: 50px;
+}
+
+.section-action p {
+    max-width: 650px;
+    margin-bottom: 24px;
+}
+
+.section-action .btn {
+    align-self: center;
 }
 
 
